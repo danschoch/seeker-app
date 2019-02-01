@@ -44,7 +44,7 @@ for (let i = 0; i < 5; i++) {
         name: `Some person ${i}`,
         title: `Position ${i}`,
         notes: `Lorem Ipsum Act ${i}`,
-        lastContact: randomDate(new Date(), new Date(2019, 6, 1)).toString(),
+        lastContact: randomDate(new Date(), new Date(2019, 6, 1)),
         type: randomType(["recruiter", "hiring manager", "industry professional", "other"]),
         organization: `Some Org ${i}`
     }
