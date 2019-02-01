@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
-import Goals from '../containers/Goals';
+import Goals from '../containers/dashboard/Goals';
+import ActivitiesDash from '../containers/dashboard/ActivitiesDash';
 
 class DashboardPage extends Component {
 
     render() {
         return(
-            <Goals />
+            <div id='dashBody'>
+                <Goals />
+                <ActivitiesDash />
+            </div>
         )
     }
 }
