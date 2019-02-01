@@ -1,16 +1,27 @@
 import React, { Component } from 'react';
-import fakeActivities from '../../mockData'
+import fakeActivities from '../../mockData';
+import Activity from '../../components/Activity';
 
 class ActivitiesDash extends Component {
 
+    state = {
+        activities: fakeActivities
+    }
+
+    renderActivities = () => {
+        return this.state.activities.map( (activity, i) => {
+            return <Activity key={i} activity={activity} />
+        })
+    }
+
+
     render() {
-        console.log(fakeActivities)
-        
+        console.log(this.state.activities)
+
         return(
            <div>
                 <h1>Activities</h1>
-                <h2>Today</h2>
-                <h2>This Week</h2>
+                {this.renderActivities()}
            </div>
         )
     }

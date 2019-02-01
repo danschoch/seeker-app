@@ -28,11 +28,13 @@ for (let i = 0; i < 5; i++) {
         title: `Activity ${i}`,
         notes: `Lorem Ipsum Act ${i}`,
         contact: `Some person ${i}`,
-        dueDate: randomDate(new Date(), new Date(2019, 6, 1)),
+        dueDate: randomDate(new Date(), new Date(2019, 6, 1)).toString(),
         type: randomType(["interview", "meeting", "event", "application", "correspondance"])
     }
 
     fakeActivities.push(activity)
+
+
 }
 
 export default fakeActivities
