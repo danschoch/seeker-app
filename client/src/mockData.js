@@ -13,7 +13,7 @@ const fakeActivities = Array(5).fill(activitySchema)
 */
 
 
-
+// Activities Data Generator
 let fakeActivities = [];
 let randomDate = function (start, end) {
     return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
@@ -38,3 +38,6 @@ for (let i = 0; i < 5; i++) {
 }
 
 export default fakeActivities
+
+
+//Contacts Data Generator

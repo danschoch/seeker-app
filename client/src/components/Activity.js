@@ -4,8 +4,6 @@ class Activity extends Component {
 
     render() {
         const { activity } = this.props;
-        debugger
-
         return (
             <div>
                 <h4>{activity.type} - {activity.title}</h4>

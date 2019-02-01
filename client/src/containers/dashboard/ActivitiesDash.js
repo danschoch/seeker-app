@@ -16,8 +16,6 @@ class ActivitiesDash extends Component {
 
 
     render() {
-        console.log(this.state.activities)
-
         return(
            <div>
                 <h1>Activities</h1>
