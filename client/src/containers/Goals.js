@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-class TasksPage extends Component {
+class Goals extends Component {
 
     render() {
         return(
-            <h1>Tasks Page</h1>
+            <h1>Goals Container</h1>
         )
     }
 }
 
-export default TasksPage
+export default Goals
