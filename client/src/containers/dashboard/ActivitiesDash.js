@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import fakeActivities from '../../mockData';
+import { fakeActivities } from '../../mockData';
 import Activity from '../../components/Activity';
 
 class ActivitiesDash extends Component {

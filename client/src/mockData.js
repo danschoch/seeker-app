@@ -12,16 +12,16 @@ const activitySchema = {
 const fakeActivities = Array(5).fill(activitySchema)
 */
 
+const randomDate = function (start, end) {
+    return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+};
+
+const randomType = function(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+};
 
 // Activities Data Generator
 let fakeActivities = [];
-let randomDate = function (start, end) {
-    return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
-}
-let randomType = function(arr) {
-    return arr[Math.floor(Math.random() * arr.length)];
-};
-  
 
 for (let i = 0; i < 5; i++) {
     let activity = {
@@ -33,11 +33,24 @@ for (let i = 0; i < 5; i++) {
     }
 
     fakeActivities.push(activity)
-
-
 }
-
-export default fakeActivities
 
 
 //Contacts Data Generator
+let fakeContacts = [];
+
+for (let i = 0; i < 5; i++) {
+    let contact = {
+        name: `Some person ${i}`,
+        title: `Position ${i}`,
+        notes: `Lorem Ipsum Act ${i}`,
+        lastContact: randomDate(new Date(), new Date(2019, 6, 1)).toString(),
+        type: randomType(["recruiter", "hiring manager", "industry professional", "other"]),
+        organization: `Some Org ${i}`
+    }
+
+    fakeContacts.push(contact)
+}
+
+export { fakeActivities, fakeContacts }; 
+
