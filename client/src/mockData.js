@@ -28,7 +28,7 @@ for (let i = 0; i < 5; i++) {
         title: `Activity ${i}`,
         notes: `Lorem Ipsum Act ${i}`,
         contact: `Some person ${i}`,
-        dueDate: randomDate(new Date(), new Date(2019, 6, 1)).toString(),
+        dueDate: randomDate(new Date(), new Date(2019, 6, 1)),
         type: randomType(["interview", "meeting", "event", "application", "correspondance"])
     }
 

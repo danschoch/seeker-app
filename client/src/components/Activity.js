@@ -5,7 +5,8 @@ class Activity extends Component {
 
     render() {
         const { activity } = this.props;
-        let formattedDate = <Moment format="MM/DD/YY" >{activity.dueDate}</Moment>
+        const formattedDate = <Moment format="MM/DD/YY" >{activity.dueDate}</Moment>
+        
         return (
             <div>
                 <h4>{activity.type} - {activity.title}</h4>
@@ -16,7 +17,5 @@ class Activity extends Component {
     }
     
 }
-   
-
 
 export default Activity;

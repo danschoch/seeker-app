@@ -11,7 +11,7 @@ class Contact extends Component {
             <div>
                 <h4>{contact.name} - {contact.title}</h4>
                 <p>Last Contact: {formattedDate}</p>
-                <p>Organzation: {contact.organizaton} - {contact.type}</p>
+                <p>Organzation: {contact.organization} - {contact.type}</p>
                 <p>Notes: {contact.notes}</p>
             </div>
         )
