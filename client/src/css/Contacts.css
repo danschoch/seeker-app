@@ -1,4 +1,5 @@
 #contactsContainer {
+    font-family: "Source Sans Pro", sans-serif;
     height: 796px;
     width: 652px;
     background-color: white;
@@ -9,16 +10,20 @@
     margin-bottom: 20px;
 }
 #contactsHeader p {
-    flex-grow: 5;
+  font-size: 18px;
+  flex-grow: 5;
 }
 
 form.example {
+    padding: 10px;
     flex-grow: 5;
+    width: 156px;
 }    
 
 form.example input[type=text] {
-    padding: 10px;
-    font-size: 17px;
+    height: 26px;
+    padding: 0px;
+    font-size: 11px;
     border: 1px solid grey;
     float: left;
     background: #f1f1f1;
@@ -26,18 +31,18 @@ form.example input[type=text] {
   
   /* Style the submit button */
   form.example button {
+    height: 28px;
     float: left;
-    padding: 10px;
-    background: #2196F3;
+    background: #43425D;
     color: white;
-    font-size: 17px;
+    font-size: 11px;
     border: 1px solid grey;
     border-left: none; /* Prevent double borders */
     cursor: pointer;
   }
   
   form.example button:hover {
-    background: #0b7dda;
+    background-color:rgb(56, 56, 78);
   }
   
   /* Clear floats */
@@ -55,7 +60,10 @@ form.example input[type=text] {
   }
 
   #contactsSortBar h4 {
-      display: inline;
+    font-size: 11px;
+    color: #A3A6B4;
+    font-weight: bold;
+    display: inline;
   }
 
   #contactsList {
