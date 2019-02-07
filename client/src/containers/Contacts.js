@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import uuid from 'uuid';
 import '../css/Contacts.css';
 
 class Contacts extends Component {
@@ -10,7 +11,7 @@ class Contacts extends Component {
     renderContacts = () => {
         return this.state.contacts.map( contact => {
             return (
-                <li>{contact.first_name} {contact.last_name}</li>
+                <li key={uuid.v4()}>{contact.first_name} {contact.last_name}</li>
             )
         })
     }
