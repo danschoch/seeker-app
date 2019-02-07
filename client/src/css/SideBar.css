@@ -12,17 +12,12 @@
     width: 260px;
     position: relative;
 }
-.navLinkContainer:active {
-    background-color: #000000;
-    opacity: 10%;
-
-}
 
 #navTitle {
     letter-spacing: 0.2em;
     font-weight: bold;
-    position: absolute;
-    left: 20%;
+    display: block;
+    padding: 12px 30px;
 }
 
 .navLinkContainer a {
@@ -30,7 +25,17 @@
     color: #FFFFFF;
     font-family: "Source Sans Pro", sans-serif;
     text-decoration: none;
-    position: absolute;
-    left: 30%;
-    top: 35%;
+    display: block;
+    padding: 12px 60px;
+
+}
+
+.navLinkContainer a.active {
+    background-color:rgba(0,0,0,0.1);
+}
+
+
+
+#navTitleContainer {
+    background:rgba(0,0,0,0.1);
 }

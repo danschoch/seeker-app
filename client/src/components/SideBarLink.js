@@ -15,18 +15,26 @@ class SideBarLink extends Component {
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
 
+    toggleActiveState = () => {
+        debugger
+        this.setState( prevState => ({
+            active: !prevState.active
+        }))
+        debugger
+        /*
+        const currentState = this.state.active;
+        this.setState({ active: !currentState });
+        ${this.state.active ? 'active' : null}`
+        */
+    };
+
     render() {
         return(
-            <div className={`navLinkContainer  ${this.state.active === true ? 'active' : null}`}>
-                <a href={this.createHrefString(this.props.name)} onClick={this.toggleActive}>{this.capitalizeFirstLetter(this.props.name)}</a>
+            <div className={`navLinkContainer`}>
+                <a href={this.createHrefString(this.props.name)} onClick={this.toggleActiveState}>{this.capitalizeFirstLetter(this.props.name)}</a>
             </div>
         )
     }
-
-    toggleActive() {
-        const currentState = this.state.active;
-        this.setState({ active: !currentState });
-    };
     
 }
 

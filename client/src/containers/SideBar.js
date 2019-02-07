@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../css/SideBar.css';
 import SideBarLink from '../components/SideBarLink';
+import { NavLink }from 'react-router-dom';
 
 class SideBar extends Component {
 
@@ -8,16 +9,24 @@ class SideBar extends Component {
         links: ['home', 'progress', 'activities', 'contacts', 'organizations', 'calendar', 'settings']
     }
 
+    capitalizeFirstLetter = (string) => {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
     renderLinks = () => {
         return this.state.links.map( link => {
-            return <SideBarLink key={ link } name={ link } />
+            return (
+            <div key={ link } className={`navLinkContainer`}>
+                <NavLink to={`/${link}`} activeClassName='active' >{this.capitalizeFirstLetter(link)}</NavLink>
+            </div>  
+            )
         })
     }
 
     render() {
         return(
             <nav id='sideBar'>
-                <div className='navLinkContainer'><a id='navTitle' href="/">SEEKER</a></div>
+                <div className='navLinkContainer'id='navTitleContainer'><a id='navTitle' href="/">SEEKER</a></div>
 
                 {this.renderLinks()}
             </nav>

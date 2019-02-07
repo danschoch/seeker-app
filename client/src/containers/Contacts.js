@@ -18,9 +18,26 @@ class Contacts extends Component {
 
     render() {
         return(
-            <ul id='contactsList'>
-                {this.renderContacts()}
-            </ul>
+            <div id='contactsContainer'>
+                <div id='contactsHeader'>
+                    <p>Industry Professionals</p>
+                    <form className="example" action="action_page.php">
+                        <input type="text" placeholder="Search.." name="search"></input>
+                        <button type="submit"><i className="fa fa-search"></i></button>
+                    </form>
+                </div>
+
+                <div id='contactsSortBar'>
+                    <h4>Name</h4>
+                    <h4>Organization</h4>
+                    <h4>Title</h4>
+                    <h4>Last Contacted</h4>
+                </div>
+                
+                <ul id='contactsList'>
+                    {this.renderContacts()}
+                </ul>
+            </div>
         )
     }
 
