@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../css/Contacts.css';
 
 class Contacts extends Component {
 
@@ -16,7 +17,7 @@ class Contacts extends Component {
 
     render() {
         return(
-            <ul>
+            <ul id='contactsList'>
                 {this.renderContacts()}
             </ul>
         )

@@ -1,13 +1,36 @@
 #sideBar {
     background-color: #43425D;
     width: 260px;
+    height: 100%;
     display: block;
     float: left;
+    position: fixed;
 }
 
-nav a {
+.navLinkContainer {
+    height: 53px;
+    width: 260px;
+    position: relative;
+}
+.navLinkContainer:active {
+    background-color: #000000;
+    opacity: 10%;
+
+}
+
+#navTitle {
+    letter-spacing: 0.2em;
+    font-weight: bold;
+    position: absolute;
+    left: 20%;
+}
+
+.navLinkContainer a {
     font-size: 15px;
     color: #FFFFFF;
     font-family: "Source Sans Pro", sans-serif;
-    display: block;
+    text-decoration: none;
+    position: absolute;
+    left: 30%;
+    top: 35%;
 }
