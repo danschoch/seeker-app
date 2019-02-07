@@ -22,6 +22,8 @@ class ContactsDash extends Component {
            </div>
         )
     }
+
+    
 }
 
 export default ContactsDash

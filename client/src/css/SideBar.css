@@ -1,0 +1,13 @@
+#sideBar {
+    background-color: #43425D;
+    width: 260px;
+    display: block;
+    float: left;
+}
+
+nav a {
+    font-size: 15px;
+    color: #FFFFFF;
+    font-family: "Source Sans Pro", sans-serif;
+    display: block;
+}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import NavBar from './containers/NavBar';
+import SideBar from './containers/SideBar';
 import DashboardPage from './pages/DashboardPage';
 import ContactsPage from './pages/ContactsPage';
 import ActivitiesPage from './pages/ActivitiesPage';
@@ -11,7 +11,7 @@ class App extends Component {
     return (
         <Router>
           <React.Fragment>
-            <NavBar />
+            <SideBar />
             <Route exact path="/" component={DashboardPage} />
             <Route exact path="/contacts" component={ContactsPage} />
             <Route exact path="/activities" component={ActivitiesPage} />
