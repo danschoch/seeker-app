@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import uuid from 'uuid';
 import '../css/Contacts.css';
 import { ReactComponent as ContactSvg } from '../css/contactIcon.svg';
-import ContactRow from '../components/ContactShort';
+import ContactRow from '../components/ContactRow';
 import Table from 'react-bootstrap/Table'
 
 
