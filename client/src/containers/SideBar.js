@@ -27,7 +27,7 @@ class SideBar extends Component {
     render() {
         return(
             <nav id='sideBar'>
-                <div className='navLinkContainer'id='navTitleContainer'><NavLink to="/" id='navTitle'>SEEKER</NavLink></div>
+                <div className='navLinkContainer'id='navTitleContainer'><NavLink to="/home" id='navTitle'>SEEKER</NavLink></div>
 
                 {this.renderLinks()}
             </nav>
