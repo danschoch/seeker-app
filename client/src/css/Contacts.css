@@ -83,8 +83,30 @@
 /* Contact List container and contact components */
 
   #contactsList {
-    display: inline;
     list-style-type: none;
+  }
+
+  .contactShort {
+    display: flex;
+    padding: 1em 1em;
+    margin: 0em 2em;
+    position: relative;
+  }
+
+  .contactShort h4{
+    flex-grow: 2;
+    font-size: 15px;
+    color: #43425D;
+    font-weight: normal;
+    margin: 0.2em;
+  }
+
+  .contactShort p{
+    flex-grow: 2;
+    font-size: 13px;
+    color: #4D4F5C;
+    opacity: 0.5;
+    margin: 0.2em;
   }
 
 /* Icon Styling */

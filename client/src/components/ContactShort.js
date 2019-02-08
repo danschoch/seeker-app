@@ -9,7 +9,7 @@ class ContactShort extends Component {
 
         return (
             <div className='contactShort'>
-                <p>{contact.first_name} {contact.last_name}</p>
+                <h4>{contact.first_name} {contact.last_name}</h4>
                 <p>{contact.title}</p>
                 <p>{contact.organization.name}</p>
                 <p>{formattedDate}</p>
