@@ -68,26 +68,29 @@
 
 /* Table Styling */
 
-thead tr {
+.table thead tr {
   background-color: #F5F6FA;
 }
 
-thead tr th {
+.table thead tr th {
   font-size: 11px;
   color: #A3A6B4;
   font-weight: bold;
+  border: none;
 }
 
-tbody tr td {
-  font-size: 15px;
-  color: #43425D;
-  font-weight: normal;
-}
-
-tbody tr td:first-child {
+.table tbody tr td {
   font-size: 13px;
   color: #4D4F5C;
   opacity: 0.5;
+  border: 0;
+}
+
+.table tbody tr td#contactName {
+  font-size: 15px;
+  color: #43425D;
+  opacity: 1;
+  border: 0;
 }
 
 /* Icon Styling */

@@ -9,7 +9,7 @@ class ContactRow extends Component {
 
         return (
             <tr>
-                <td>{contact.first_name} {contact.last_name}</td>
+                <td id='contactName'>{contact.first_name} {contact.last_name}</td>
                 <td>{contact.title}</td>
                 <td>{contact.organization.name}</td>
                 <td>{formattedDate}</td>

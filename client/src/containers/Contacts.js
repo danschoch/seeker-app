@@ -33,7 +33,7 @@ class Contacts extends Component {
                     </form>
                 </div>
 
-                <Table bordered={ false } hover>
+                <Table bordered={ false } >
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -46,17 +46,6 @@ class Contacts extends Component {
                         {this.renderContacts()}
                     </tbody>
                 </Table>
-
-                {/* <div id='contactsSortBar'>
-                    <h4>Name</h4>
-                    <h4>Organization</h4>
-                    <h4>Title</h4>
-                    <h4>Last Contacted</h4>
-                </div>
-                
-                <div id='contactsList'>
-                    {this.renderContacts()}
-                </div> */}
             </div>
         )
     }
