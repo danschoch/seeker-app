@@ -7,11 +7,11 @@ class DashboardPage extends Component {
 
     render() {
         return(
-            <div id='dashBody'>
+            <main id='dashBody'>
                 <Goals />
                 <ActivitiesDash />
                 <ContactsDash />
-            </div>
+            </main>
         )
     }
 }

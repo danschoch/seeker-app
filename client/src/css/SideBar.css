@@ -8,7 +8,7 @@
 }
 
 .navLinkContainer {
-    height: 53px;
+    height: 55px;
     width: 260px;
     position: relative;
 }
@@ -17,7 +17,7 @@
     letter-spacing: 0.2em;
     font-weight: bold;
     display: block;
-    padding: 12px 30px;
+    padding: 1.2em 2em;
 }
 
 .navLinkContainer a {
@@ -26,12 +26,22 @@
     font-family: "Source Sans Pro", sans-serif;
     text-decoration: none;
     display: block;
-    padding: 12px 60px;
+    padding: 1.2em 3.5em;
 
 }
 
 .navLinkContainer a.active {
     background-color:rgba(0,0,0,0.1);
+}
+
+.navLinkContainer a.active + span {
+    display: block;
+    background-color: #A3A0FB;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 55px;
+    width: 5px;
 }
 
 

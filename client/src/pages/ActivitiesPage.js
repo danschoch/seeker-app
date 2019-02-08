@@ -4,7 +4,10 @@ class ActivitiesPage extends Component {
 
     render() {
         return(
-            <h1>Activites Page</h1>
+            <main>
+                <h1>Activites Page</h1>
+            </main>
+            
         )
     }
 }

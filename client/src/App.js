@@ -12,7 +12,7 @@ class App extends Component {
         <Router>
           <React.Fragment>
             <SideBar />
-            <Route exact path="/" component={DashboardPage} />
+            <Route path="/home" component={DashboardPage} />
             <Route exact path="/contacts" component={ContactsPage} />
             <Route exact path="/activities" component={ActivitiesPage} />
           </React.Fragment>
