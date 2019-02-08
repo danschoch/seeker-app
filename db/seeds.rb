@@ -7,7 +7,18 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 org1 = Organization.create(name: "Big Org 1", about: "someting or other", email: "default@bigorg.com")
+org2 = Organization.create(name: "Startup 2", about: "something different than the other org", email: "default@startup.com")
 
 
 Contact.create(first_name: "Dan", last_name:"Schoch", title: "Junior Developer", phone_number: "8055094126", email: "d.schoch90@gmail.com", website: "danthedev.com", organization: org1)
 Contact.create(first_name: "Ines", last_name:"Oliveira", phone_number: "8051234567", title: "Artist", email: "inesco30@gmail.com", website: "inesco.com", organization: org1)
+
+
+i = 0
+
+while i <= 10
+    i += 1
+
+    Contact.create(first_name: "Employee", last_name:"#{i}", title: "Developer #{i}", phone_number: "80550941#{i+9}", email: "none#{i}@none.com", website: "ilovethenumber#{i}.com", organization: org2)
+end
+
