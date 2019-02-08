@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="57" height="57" viewBox="0 0 57 57">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="55" height="55" viewBox="0 0 55 55">
   <defs>
     <linearGradient id="linear-gradient" x2="0" y2="1" gradientUnits="objectBoundingBox">
       <stop offset="0" stop-color="#8280ff"/>
@@ -6,7 +6,7 @@
     </linearGradient>
   </defs>
   <g id="Icon" transform="translate(0 0)">
-    <circle id="Icon.BG" class="cls-1" cx="28.5" cy="28.5" r="28.5"/>
+    <circle id="Icon.BG" class="cls-1" cx="27.5" cy="27.5" r="27.5"/>
     <path id="New_customer_Icon" data-name="New customer Icon" class="cls-2" d="M12,16V14H10V12h2V10h2v2h2v2H14v2ZM0,16V15a4.951,4.951,0,0,1,5-5H8v2H5a2.91,2.91,0,0,0-2.8,2H8v2ZM3,5V4a4,4,0,0,1,8,0V5A4,4,0,0,1,3,5ZM5,4V5A2,2,0,1,0,9,5V4A2,2,0,0,0,5,4Z" transform="translate(20.5 20.5)"/>
   </g>
 </svg>

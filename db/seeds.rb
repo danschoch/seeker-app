@@ -9,5 +9,5 @@
 org1 = Organization.create(name: "Big Org 1", about: "someting or other", email: "default@bigorg.com")
 
 
-Contact.create(first_name: "Dan", last_name:"Schoch", phone_number: "8055094126", email: "d.schoch90@gmail.com", website: "danthedev.com", organization: org1)
-Contact.create(first_name: "Ines", last_name:"Oliveira", phone_number: "8051234567", email: "inesco30@gmail.com", website: "inesco.com", organization: org1)
+Contact.create(first_name: "Dan", last_name:"Schoch", title: "Junior Developer", phone_number: "8055094126", email: "d.schoch90@gmail.com", website: "danthedev.com", organization: org1)
+Contact.create(first_name: "Ines", last_name:"Oliveira", phone_number: "8051234567", title: "Artist", email: "inesco30@gmail.com", website: "inesco.com", organization: org1)

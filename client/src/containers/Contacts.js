@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import uuid from 'uuid';
 import '../css/Contacts.css';
 import { ReactComponent as ContactSvg } from '../css/contactIcon.svg';
+import ContactShort from '../components/ContactShort';
 
 class Contacts extends Component {
 
@@ -12,7 +13,7 @@ class Contacts extends Component {
     renderContacts = () => {
         return this.state.contacts.map( contact => {
             return (
-                <li key={uuid.v4()}>{contact.first_name} {contact.last_name}</li>
+                <ContactShort key={uuid.v4()} contact={contact} />
             )
         })
     }
@@ -20,11 +21,12 @@ class Contacts extends Component {
     render() {
         return(
             <div id='contactsContainer'>
+
                 <div id='contactsHeader'>
                     <ContactSvg />
                     <p>Industry Professionals</p>
                     <form className="search" action="action_page.php">
-                        <input type="text" placeholder="Search" name="search"></input>
+                        <input type="text" placeholder="Search Names" name="search"></input>
                         <button type="submit"><i className="fa fa-search"></i></button>
                     </form>
                 </div>
@@ -36,9 +38,9 @@ class Contacts extends Component {
                     <h4>Last Contacted</h4>
                 </div>
                 
-                <ul id='contactsList'>
+                <div id='contactsList'>
                     {this.renderContacts()}
-                </ul>
+                </div>
             </div>
         )
     }

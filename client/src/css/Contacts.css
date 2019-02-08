@@ -4,34 +4,38 @@
     width: 652px;
     background-color: white;
     margin: 25px;
+    position: relative;
 }
 
-#contactsHeader {
-    display: flex;
-}
+/* Header, including Title, search bar, and icon */
 
-#contactsHeader p {
-  color: #4D4F5C;
-  font-size: 18px;
-  flex-grow: 5;
-  margin: 1em 3em 1em 4em;
-  text-align: center;
-}
+  #contactsHeader {
+      display: flex;
+      padding: 1em 0em 0.5em;
+      margin: 0em 1.25em;
+  }
 
-form.search {
-    border-color: #E8E9EC;
+  #contactsHeader p {
+    color: #4D4F5C;
+    font-size: 18px;
     flex-grow: 5;
-    margin: 1em 3em;
-}    
+    margin: 1em 3em 1em 1em;
+  }
 
-form.search input[type=text] {
-    color: #43425D;
+  form.search {
+      border-color: #E8E9EC;
+      flex-grow: 5;
+      margin: 1em 3em 1em 4em;
+      text-align: center;
+  }    
+
+  form.search input[type=text] {
     height: 26px;
     padding: 0px;
     font-size: 11px;
-    border: 1px solid grey;
+    border: 1px solid;
+    border-color: #E8E9EC;
     float: left;
-    background: #f1f1f1;
   }
   
   /* Style the submit button */
@@ -57,12 +61,13 @@ form.search input[type=text] {
     display: table;
   }
 
+/* Sort Bar */
   #contactsSortBar {
-    display: flex;
+      display: flex;
       height: 45px;
       background-color: #F5F6FA;
       text-align: center;
-      margin: 0em 12px;
+      margin: 0em 1.25em;
   }
 
   #contactsSortBar h4 {
@@ -70,12 +75,17 @@ form.search input[type=text] {
     color: #A3A6B4;
     font-weight: bold;
     display: inline;
+    flex-grow: 2;
   }
+
+  
+
+/* Contact List container and contact components */
 
   #contactsList {
     display: inline;
     list-style-type: none;
-}
+  }
 
 /* Icon Styling */
 .cls-1 {
