@@ -3,24 +3,29 @@
     height: 796px;
     width: 652px;
     background-color: white;
+    margin: 25px;
 }
 
 #contactsHeader {
     display: flex;
-    margin-bottom: 20px;
 }
+
 #contactsHeader p {
+  color: #4D4F5C;
   font-size: 18px;
   flex-grow: 5;
+  margin: 1em 3em 1em 4em;
+  text-align: center;
 }
 
-form.example {
-    padding: 10px;
+form.search {
+    border-color: #E8E9EC;
     flex-grow: 5;
-    width: 156px;
+    margin: 1em 3em;
 }    
 
-form.example input[type=text] {
+form.search input[type=text] {
+    color: #43425D;
     height: 26px;
     padding: 0px;
     font-size: 11px;
@@ -30,7 +35,7 @@ form.example input[type=text] {
   }
   
   /* Style the submit button */
-  form.example button {
+  form.search button {
     height: 28px;
     float: left;
     background: #43425D;
@@ -41,22 +46,23 @@ form.example input[type=text] {
     cursor: pointer;
   }
   
-  form.example button:hover {
+  form.search button:hover {
     background-color:rgb(56, 56, 78);
   }
   
   /* Clear floats */
-  form.example::after {
+  form.search::after {
     content: "";
     clear: both;
     display: table;
   }
 
   #contactsSortBar {
+    display: flex;
       height: 45px;
-      width: 604px;
       background-color: #F5F6FA;
       text-align: center;
+      margin: 0em 12px;
   }
 
   #contactsSortBar h4 {
@@ -69,4 +75,13 @@ form.example input[type=text] {
   #contactsList {
     display: inline;
     list-style-type: none;
+}
+
+/* Icon Styling */
+.cls-1 {
+  fill: #e8e7ff;
+}
+
+.cls-2 {
+  fill: url(#linear-gradient);
 }

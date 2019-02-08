@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import uuid from 'uuid';
 import '../css/Contacts.css';
+import { ReactComponent as ContactSvg } from '../css/contactIcon.svg';
 
 class Contacts extends Component {
 
@@ -20,9 +21,10 @@ class Contacts extends Component {
         return(
             <div id='contactsContainer'>
                 <div id='contactsHeader'>
+                    <ContactSvg />
                     <p>Industry Professionals</p>
-                    <form className="example" action="action_page.php">
-                        <input type="text" placeholder="Search.." name="search"></input>
+                    <form className="search" action="action_page.php">
+                        <input type="text" placeholder="Search" name="search"></input>
                         <button type="submit"><i className="fa fa-search"></i></button>
                     </form>
                 </div>
@@ -49,7 +51,7 @@ class Contacts extends Component {
               contacts: data
             })
           })
-      }
+    }
 }
 
 export default Contacts
