@@ -1,7 +1,7 @@
 #contactsContainer {
     font-family: "Source Sans Pro", sans-serif;
-    height: 80vh;
-    width: 80vh;
+    height: 70vh;
+    width: 70vh;
     max-width: 652px;
     background-color: white;
     margin: 25px;
@@ -78,9 +78,15 @@
   height: 100%;
 }
 
-@media only screen and (max-height: 551px) {
+@media only screen and (max-height: 718px) {
   .table {
-    height: 95%;
+    height: 96%;
+  }
+}
+
+@media only screen and (max-height: 718px) {
+  .table {
+    height: 90%;
   }
 }
 
