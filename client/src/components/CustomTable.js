@@ -7,6 +7,15 @@ import '../css/Contacts.css';
 
 class ContactsTable extends Component {
 
+    /* TODO: Separate out stateless parts */
+
+    /* 
+        TODO on other pages:
+         - Add organizations page with table component (this will be my third route/page)
+         - implement redux
+         - add form to create new contact
+    */
+
     renderContactRows = () => {
         return this.props.contacts.map( contact => {
             return (
