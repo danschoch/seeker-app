@@ -2,4 +2,5 @@ main {
     position: absolute;
     left: 260px;
     margin-left: 20px;
+    height: 100%;
 }

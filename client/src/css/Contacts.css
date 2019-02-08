@@ -1,7 +1,8 @@
 #contactsContainer {
     font-family: "Source Sans Pro", sans-serif;
-    height: 796px;
-    width: 652px;
+    height: 80vh;
+    width: 80vh;
+    max-width: 652px;
     background-color: white;
     margin: 25px;
     position: relative;
@@ -10,32 +11,41 @@
 /* Header, including Title, search bar, and icon */
 
   #contactsHeader {
-      display: flex;
-      padding: 1em 0em 0.5em;
-      margin: 0em 1.25em;
+    /* height: 20%; */
+    display: flex;
+    padding: 1em 0em 0.5em;
+    margin: 0em;
+    justify-content: center;
+    margin-top:auto;
   }
 
   #contactsHeader p {
     color: #4D4F5C;
-    font-size: 18px;
+    font-size: 2.2vh;
     flex-grow: 5;
-    margin: 1em 3em 1em 1em;
+    padding: 1em 3em 1em 1em;
+    margin: 0;
+    /* overflow: visible; */
   }
 
   form.search {
       border-color: #E8E9EC;
       flex-grow: 5;
-      margin: 1em 3em 1em 4em;
-      text-align: center;
+      /* margin: 10%; */
+      /* height: 3.5vh; */
+      /* text-align: center; */
+      /* float: right; */
+      padding: 1em 3em 1em 1em;
   }    
 
   form.search input[type=text] {
-    height: 26px;
+    /* height: 100%; */
+    width: 70%;
     padding: 0px;
     font-size: 11px;
     border: 1px solid;
     border-color: #E8E9EC;
-    float: left;
+    /* float: left; */
   }
 
   input:focus{
@@ -45,11 +55,11 @@
   
   /* Style the submit button */
   form.search button {
-    height: 28px;
-    float: left;
+    /* height: 100%; */
+    width: 17%;
     background: #43425D;
     color: white;
-    font-size: 11px;
+    font-size: 1.55vh;
     border: 1px solid grey;
     border-left: none; /* Prevent double borders */
     cursor: pointer;
@@ -68,29 +78,67 @@
 
 /* Table Styling */
 
+.table-responsive {
+  width: 100%;
+  height: 83%;
+}
+
+.table {
+  height: 100%;
+}
+
+@media only screen and (max-height: 551px) {
+  .table {
+    height: 95%;
+  }
+}
+
+.table thead {
+  height: 15%;
+}
+
 .table thead tr {
   background-color: #F5F6FA;
+  display: flex;
+  width: 100%;
 }
 
 .table thead tr th {
-  font-size: 11px;
+  font-size: 1.55vh;
   color: #A3A6B4;
   font-weight: bold;
   border: none;
+  width: 25%
+}
+
+.table tbody {
+  height: 100%;
+  overflow-y: auto;
+  display: block;
+  /* width: 100%; */
+}
+
+.table tbody tr {
+  display: flex;
+  width: 100%;
 }
 
 .table tbody tr td {
-  font-size: 13px;
+  font-size: 1.7vh;
   color: #4D4F5C;
   opacity: 0.5;
-  border: 0;
+  border-top: 1px solid rgba(222, 226, 230);
+  width: 25%;
+  padding: 0.8em;
+
+
 }
 
 .table tbody tr td#contactName {
-  font-size: 15px;
+  font-size: 1.9vh;
   color: #43425D;
   opacity: 1;
-  border: 0;
+  border-top: 1px solid rgba(222, 226, 230, 0.5);
 }
 
 /* Icon Styling */

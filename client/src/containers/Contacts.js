@@ -33,7 +33,7 @@ class Contacts extends Component {
                     </form>
                 </div>
 
-                <Table bordered={ false } >
+                <Table responsive bordered={ false } >
                     <thead>
                         <tr>
                             <th>Name</th>
