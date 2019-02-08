@@ -37,6 +37,11 @@
     border-color: #E8E9EC;
     float: left;
   }
+
+  input:focus{
+    outline: none;
+}
+
   
   /* Style the submit button */
   form.search button {
@@ -61,53 +66,30 @@
     display: table;
   }
 
-/* Sort Bar */
-  #contactsSortBar {
-      display: flex;
-      height: 45px;
-      background-color: #F5F6FA;
-      text-align: center;
-      margin: 0em 1.25em;
-  }
+/* Table Styling */
 
-  #contactsSortBar h4 {
-    font-size: 11px;
-    color: #A3A6B4;
-    font-weight: bold;
-    display: inline;
-    flex-grow: 2;
-  }
+thead tr {
+  background-color: #F5F6FA;
+  text-align: center;
+}
 
-  
+thead tr th {
+  font-size: 11px;
+  color: #A3A6B4;
+  font-weight: bold;
+}
 
-/* Contact List container and contact components */
+tbody tr td {
+  font-size: 15px;
+  color: #43425D;
+  font-weight: normal;
+}
 
-  #contactsList {
-    list-style-type: none;
-  }
-
-  .contactShort {
-    display: flex;
-    padding: 1em 1em;
-    margin: 0em 2em;
-    position: relative;
-  }
-
-  .contactShort h4{
-    flex-grow: 2;
-    font-size: 15px;
-    color: #43425D;
-    font-weight: normal;
-    margin: 0.2em;
-  }
-
-  .contactShort p{
-    flex-grow: 2;
-    font-size: 13px;
-    color: #4D4F5C;
-    opacity: 0.5;
-    margin: 0.2em;
-  }
+tbody tr td:first-child {
+  font-size: 13px;
+  color: #4D4F5C;
+  opacity: 0.5;
+}
 
 /* Icon Styling */
 .cls-1 {

@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import uuid from 'uuid';
 import '../css/Contacts.css';
 import { ReactComponent as ContactSvg } from '../css/contactIcon.svg';
-import ContactShort from '../components/ContactShort';
-import { Table } from 'react-bootstrap'
+import ContactRow from '../components/ContactShort';
+import Table from 'react-bootstrap/Table'
 
 
 class Contacts extends Component {
@@ -15,14 +15,14 @@ class Contacts extends Component {
     renderContacts = () => {
         return this.state.contacts.map( contact => {
             return (
-                <ContactShort key={uuid.v4()} contact={contact} />
+                <ContactRow key={uuid.v4()} contact={contact} />
             )
         })
     }
 
     render() {
         return(
-            <div id='contactsContainer'>
+            <div id='contactsContainer' className='container-fluid'>
 
                 <div id='contactsHeader'>
                     <ContactSvg />
@@ -32,8 +32,8 @@ class Contacts extends Component {
                         <button type="submit"><i className="fa fa-search"></i></button>
                     </form>
                 </div>
-{/* 
-                <Table striped bordered hover>
+
+                <Table bordered={ false } hover>
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -43,27 +43,11 @@ class Contacts extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                        <td>3</td>
-                        <td colSpan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                        </tr>
+                        {this.renderContacts()}
                     </tbody>
-                </Table>; */}
+                </Table>
 
-                <div id='contactsSortBar'>
+                {/* <div id='contactsSortBar'>
                     <h4>Name</h4>
                     <h4>Organization</h4>
                     <h4>Title</h4>
@@ -72,7 +56,7 @@ class Contacts extends Component {
                 
                 <div id='contactsList'>
                     {this.renderContacts()}
-                </div>
+                </div> */}
             </div>
         )
     }
