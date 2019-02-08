@@ -8,10 +8,19 @@ class ContactsPage extends Component {
         contacts: []
     }
 
+    filterContactType = (contactList, type) => {
+        return contactList.filter( contact => {
+            return contact.contact_type === type
+        })
+    }
+
     render() {
+        console.log(this.filterContactType(this.state.contacts, 'other'))
         return(
             <main>
-                <ContactsTable contacts={this.state.contacts} />
+                <ContactsTable title='Industry Professionals' contacts={this.filterContactType(this.state.contacts, 'industry')} />
+                <ContactsTable title='Recruiters'contacts={this.filterContactType(this.state.contacts, 'recruiter')} />
+                <ContactsTable title='Other'contacts={this.filterContactType(this.state.contacts, 'other')} />
             </main>
         )
     }

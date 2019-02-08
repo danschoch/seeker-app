@@ -1,6 +1,10 @@
 main {
     position: absolute;
     left: 260px;
-    margin-left: 20px;
     height: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
 }

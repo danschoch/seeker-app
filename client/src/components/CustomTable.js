@@ -20,7 +20,7 @@ class ContactsTable extends Component {
             <div id='contactsContainer' className='container-fluid'>
                <div id='contactsHeader'>
                     <ContactSvg />
-                    <p>Industry Professionals</p>
+                    <p>{this.props.title}</p>
                     <form className="search" action="action_page.php">
                         <input type="text" placeholder="Search Names" name="search"></input>
                         <button type="submit"><i className="fa fa-search"></i></button>

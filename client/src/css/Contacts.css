@@ -4,7 +4,8 @@
     width: 70vh;
     max-width: 652px;
     background-color: white;
-    margin: 25px;
+    flex-shrink: 5;
+    margin:2em 1em 0 1em;
     position: relative;
 }
 
