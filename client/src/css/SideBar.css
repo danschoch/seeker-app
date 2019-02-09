@@ -4,68 +4,75 @@
     grid-column-end: span 1;
     grid-row-start: 1;
     grid-row-end: span 2;
-
     display: inline-block;
     /* height: 100%; */
 }
 
-.navLinkContainer {
-    height: 55px;
-    min-width: 174px;
-    max-width: 260px;
-    position: relative;
-}
+/***** Containers *****/
 
-#navTitle {
-    letter-spacing: 0.2em;
-    font-weight: bold;
-    display: block;
-    padding: 1.2em 2em;
-}
+    .navLinkContainer {
+        height: 55px;
+        min-width: 174px;
+        max-width: 260px;
+        position: relative;
+    }
 
-.navLinkContainer a {
-    font-size: 15px;
-    color: #FFFFFF;
-    font-family: "Source Sans Pro", sans-serif;
-    text-decoration: none;
-    display: block;
-    padding: 1.2em 3.5em;
+    #navTitleContainer {
+        background:rgba(0,0,0,0.1);
+    }
 
-}
 
-.navLinkContainer a.active {
-    background-color:rgba(0,0,0,0.1);
-}
-
-.navLinkContainer a.active + span {
-    display: block;
-    background-color: #A3A0FB;
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 55px;
-    width: 5px;
-    border-radius: 20px;
-}
-
-#navTitleContainer {
-    background:rgba(0,0,0,0.1);
-}
-
-@media screen and (max-width: 700) {
+/***** Text Elements *****/
 
     #navTitle {
         letter-spacing: 0.2em;
         font-weight: bold;
-    }
-    .navLinkContainer {
-        height: 40px;
-        width: 40px;
-        min-width: 0;
+        display: block;
+        padding: 1.2em 2em;
     }
 
     .navLinkContainer a {
-        font-size: 0.6em;
-        padding: 0;
+        font-size: 15px;
+        color: #FFFFFF;
+        font-family: "Source Sans Pro", sans-serif;
+        text-decoration: none;
+        display: block;
+        padding: 1.2em 3.5em;
+
     }
-}
+
+    .navLinkContainer a.active {
+        background-color:rgba(0,0,0,0.1);
+    }
+
+    /* Rectangle next to active link */
+    .navLinkContainer a.active + span {
+        display: block;
+        background-color: #A3A0FB;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 55px;
+        width: 5px;
+        border-radius: 20px;
+    }
+
+/***** Media Queries *****/
+
+    @media screen and (max-width: 700) {
+
+        #navTitle {
+            letter-spacing: 0.2em;
+            font-weight: bold;
+        }
+        .navLinkContainer {
+            height: 40px;
+            width: 40px;
+            min-width: 0;
+        }
+
+        .navLinkContainer a {
+            font-size: 0.6em;
+            padding: 0;
+        }
+    }
