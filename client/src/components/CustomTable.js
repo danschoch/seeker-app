@@ -27,7 +27,7 @@ class ContactsTable extends Component {
 
     render() {
         return (
-            <div id='contactsContainer' className='container-fluid'>
+            <div className='container-fluid customTableContainer'>
                <div id='contactsHeader'>
                     <ContactSvg />
                     <p>{this.props.title}</p>

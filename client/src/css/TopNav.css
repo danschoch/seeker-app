@@ -1,0 +1,33 @@
+#topNav {
+    grid-column-start: 2;
+    grid-column-end: span 1;
+    grid-row-start: 1;
+    grid-row-end: span 1;
+    display: flex;
+}
+
+#topNav form {
+    flex: auto;
+    box-shadow: 0 2px  rgba(0, 0, 0, .04);
+    display: flex;
+}
+
+#topNav form input {
+    height: 55px;
+    border: none;
+    flex: auto;
+
+}
+
+#topNav form button {
+    height: 55px;
+    width: 55px;
+    background-color: white;
+    border-radius: 0;
+    border: none;
+
+}
+
+#topNav form button i {
+    font-size: 20px; 
+}

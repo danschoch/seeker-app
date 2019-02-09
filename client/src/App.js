@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import SideBar from './containers/SideBar';
+import TopNav from './containers/TopNav';
 import DashboardPage from './pages/DashboardPage';
 import ContactsPage from './pages/ContactsPage';
 import ActivitiesPage from './pages/ActivitiesPage';
@@ -12,9 +13,12 @@ class App extends Component {
         <Router>
           <React.Fragment>
             <SideBar />
-            <Route path="/home" component={DashboardPage} />
-            <Route exact path="/contacts" component={ContactsPage} />
-            <Route exact path="/activities" component={ActivitiesPage} />
+            <TopNav />
+            <main>
+              <Route path="/home" component={DashboardPage} />
+              <Route exact path="/contacts" component={ContactsPage} />
+              <Route exact path="/activities" component={ActivitiesPage} />
+            </main>
           </React.Fragment>
         </Router>
     );

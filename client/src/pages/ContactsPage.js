@@ -17,11 +17,12 @@ class ContactsPage extends Component {
     render() {
         console.log(this.filterContactType(this.state.contacts, 'other'))
         return(
-            <main>
+            <React.Fragment>
+                <h1>Contacts</h1>
                 <ContactsTable title='Industry Professionals' contacts={this.filterContactType(this.state.contacts, 'industry')} />
                 <ContactsTable title='Recruiters'contacts={this.filterContactType(this.state.contacts, 'recruiter')} />
                 <ContactsTable title='Other'contacts={this.filterContactType(this.state.contacts, 'other')} />
-            </main>
+            </React.Fragment>
         )
     }
 

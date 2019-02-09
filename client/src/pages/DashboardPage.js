@@ -7,11 +7,11 @@ class DashboardPage extends Component {
 
     render() {
         return(
-            <main id='dashBody'>
+            <React.Fragment >
                 <Goals />
                 <ActivitiesDash />
                 <ContactsDash />
-            </main>
+            </React.Fragment>
         )
     }
 }
