@@ -14,6 +14,7 @@ class ContactsTable extends Component {
          - Add organizations page with table component (this will be my third route/page)
          - implement redux
          - add form to create new contact
+         - add top search bar and + icon
     */
 
     renderContactRows = () => {

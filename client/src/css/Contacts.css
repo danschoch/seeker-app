@@ -10,14 +10,13 @@
     position: relative;
 }
 
-/* Header, including Title, search bar, and icon */
+/***** Header, including Title, search bar, and icon *****/
 
   #contactsHeader {
     display: flex;
     padding: 1em 0em 0.5em;
     margin: 0em;
     justify-content: space-between;
-    /* margin-top:auto; */
   }
 
   #contactsHeader p {
@@ -31,11 +30,10 @@
   form.search {
       border-color: #E8E9EC;
       flex: auto;
-      /* flex-grow: 5; */
-      /* padding: 1em 3em 1em 1em; */
       margin: auto 0;
-      /* position: absolute;
-      right: 0; */
+      max-width: 167px;
+      display: flex;
+      justify-content: center;
   }    
 
   form.search input[type=text] {
@@ -43,11 +41,12 @@
     font-size: 11px;
     border: 1px solid;
     border-color: #E8E9EC;
+    padding: 0;
   }
 
   input:focus{
     outline: none;
-}
+  }
 
   
   /* Style the submit button */
@@ -72,97 +71,109 @@
     display: table;
   }
 
-/* Table Styling */
+  /* Icon Styling */
+  .cls-1 {
+    fill: #e8e7ff;
+  }
 
-.table-responsive {
-  width: 100%;
-  height: 83%;
-}
+  .cls-2 {
+    fill: url(#linear-gradient);
+  }
 
-.table {
-  height: 100%;
-  margin: 0 10px 0 0;
-}
 
-@media only screen and (max-height: 718px) {
+
+/***** Table Styling *****/
+
+  .table-responsive {
+    width: 100%;
+    height: 83%;
+  }
+
   .table {
-    height: 90%;
-    margin: 0;
+    height: 100%;
+    margin: 0 10px 0 0;
   }
+
+  .table thead {
+    height: 15%;
+  }
+
+  .table thead tr {
+    background-color: #F5F6FA;
+    display: flex;
+    width: 100%;
+  }
+
   .table thead tr th {
-    font-size: 11px !important;
+    font-size: 1.55vh;
+    color: #A3A6B4;
+    font-weight: bold;
+    border: none;
+    width: 25%
   }
+
+  .table tbody {
+    height: 100%;
+    overflow-y: auto;
+    display: block;
+  }
+
+  .table tbody tr {
+    display: flex;
+    width: 100%;
+  }
+
   .table tbody tr td {
-    font-size: 13px !important;
+    font-size: 1.7vh;
+    color: #4D4F5C;
+    opacity: 0.5;
+    border-top: 1px solid rgba(222, 226, 230);
+    width: 24%;
+    padding: 0.8em;
   }
+
   .table tbody tr td#contactName {
-    font-size: 15px !important;
+    font-size: 1.9vh;
+    color: #43425D;
+    opacity: 1;
+    width: 28%;
+    border-top: 1px solid rgba(222, 226, 230, 0.5);
   }
-}
 
-@media only screen and (min-height: 1033px) {
-  .table thead tr th {
-    font-size: 16px !important;
+
+
+/***** Media Queries *****/
+
+  @media only screen and (max-height: 718px) {
+    #contactsHeader p {
+      font-size: 15px;
+    }
+    .table {
+      height: 90%;
+      margin: 0;
+    }
+    .table thead tr th {
+      font-size: 11px !important;
+    }
+    .table tbody tr td {
+      font-size: 12px !important;
+    }
+    .table tbody tr td#contactName {
+      font-size: 14px !important;
+    }
   }
-  .table tbody tr td {
-    font-size: 18px !important;
+
+  @media only screen and (min-height: 1033px) {
+    #contactsHeader p {
+      font-size: 23px;
+    }
+    .table thead tr th {
+      font-size: 16px !important;
+    }
+    .table tbody tr td {
+      font-size: 18px !important;
+    }
+    .table tbody tr td#contactName {
+      font-size: 20px !important;
+    }
   }
-  .table tbody tr td#contactName {
-    font-size: 20px !important;
-  }
-}
-
-.table thead {
-  height: 15%;
-}
-
-.table thead tr {
-  background-color: #F5F6FA;
-  display: flex;
-  width: 100%;
-}
-
-.table thead tr th {
-  font-size: 1.55vh;
-  color: #A3A6B4;
-  font-weight: bold;
-  border: none;
-  width: 25%
-}
-
-.table tbody {
-  height: 100%;
-  overflow-y: auto;
-  display: block;
-}
-
-.table tbody tr {
-  display: flex;
-  width: 100%;
-}
-
-.table tbody tr td {
-  font-size: 1.7vh;
-  color: #4D4F5C;
-  opacity: 0.5;
-  border-top: 1px solid rgba(222, 226, 230);
-  width: 24%;
-  padding: 0.8em;
-}
-
-.table tbody tr td#contactName {
-  font-size: 1.9vh;
-  color: #43425D;
-  opacity: 1;
-  width: 28%;
-  border-top: 1px solid rgba(222, 226, 230, 0.5);
-}
-
-/* Icon Styling */
-.cls-1 {
-  fill: #e8e7ff;
-}
-
-.cls-2 {
-  fill: url(#linear-gradient);
-}

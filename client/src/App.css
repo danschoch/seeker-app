@@ -1,6 +1,4 @@
 #root {
-    /* height: 100%; */
-    /* width: 100vw; */
     display: grid;
     grid-template-columns: 17.3% auto;
     grid-template-rows: 6% auto;
