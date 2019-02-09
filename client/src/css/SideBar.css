@@ -1,15 +1,18 @@
 #sideBar {
     background-color: #43425D;
-    width: 260px;
-    height: 100%;
-    display: block;
-    float: left;
-    position: fixed;
+    grid-column-start: 1;
+    grid-column-end: span 1;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+
+    display: inline-block;
+    /* height: 100%; */
 }
 
 .navLinkContainer {
     height: 55px;
-    width: 260px;
+    min-width: 174px;
+    max-width: 260px;
     position: relative;
 }
 
@@ -47,4 +50,22 @@
 
 #navTitleContainer {
     background:rgba(0,0,0,0.1);
+}
+
+@media screen and (max-width: 700) {
+
+    #navTitle {
+        letter-spacing: 0.2em;
+        font-weight: bold;
+    }
+    .navLinkContainer {
+        height: 40px;
+        width: 40px;
+        min-width: 0;
+    }
+
+    .navLinkContainer a {
+        font-size: 0.6em;
+        padding: 0;
+    }
 }

@@ -2,9 +2,10 @@
     font-family: "Source Sans Pro", sans-serif;
     height: 70vh;
     width: 70vh;
-    max-width: 652px;
+    flex: initial;
+    max-height: 588px;
+    max-width: 564px;
     background-color: white;
-    flex-shrink: 5;
     margin:2em 1em 0 1em;
     position: relative;
 }
@@ -16,23 +17,25 @@
     padding: 1em 0em 0.5em;
     margin: 0em;
     justify-content: space-between;
-    margin-top:auto;
+    /* margin-top:auto; */
   }
 
   #contactsHeader p {
     color: #4D4F5C;
     font-size: 2.2vh;
-    flex-grow: 5;
-    padding: 1em 3em 1em 1em;
-    margin: 0;
+    flex: auto;
+    padding: 0 3em 0 1em;
+    margin: auto 0;
   }
 
   form.search {
       border-color: #E8E9EC;
-      flex-grow: 5;
-      padding: 1em 3em 1em 1em;
-      position: absolute;
-      right: 0;
+      flex: auto;
+      /* flex-grow: 5; */
+      /* padding: 1em 3em 1em 1em; */
+      margin: auto 0;
+      /* position: absolute;
+      right: 0; */
   }    
 
   form.search input[type=text] {
@@ -78,17 +81,34 @@
 
 .table {
   height: 100%;
-}
-
-@media only screen and (max-height: 718px) {
-  .table {
-    height: 96%;
-  }
+  margin: 0 10px 0 0;
 }
 
 @media only screen and (max-height: 718px) {
   .table {
     height: 90%;
+    margin: 0;
+  }
+  .table thead tr th {
+    font-size: 11px !important;
+  }
+  .table tbody tr td {
+    font-size: 13px !important;
+  }
+  .table tbody tr td#contactName {
+    font-size: 15px !important;
+  }
+}
+
+@media only screen and (min-height: 1033px) {
+  .table thead tr th {
+    font-size: 16px !important;
+  }
+  .table tbody tr td {
+    font-size: 18px !important;
+  }
+  .table tbody tr td#contactName {
+    font-size: 20px !important;
   }
 }
 

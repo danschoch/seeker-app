@@ -40,8 +40,8 @@ class ContactsTable extends Component {
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Organization</th>
                             <th>Title</th>
+                            <th>Organization</th>
                             <th>Last Contacted</th>
                         </tr>
                     </thead>
