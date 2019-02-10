@@ -6,10 +6,6 @@ import '../css/ContactsPage.css'
 
 class ContactsPage extends Component {
 
-    state = {
-        contacts: []
-    }
-
     filterContactType = (contactList, type) => {
         return contactList.filter( contact => {
             return contact.contact_type === type
@@ -20,9 +16,9 @@ class ContactsPage extends Component {
         return(
             <React.Fragment>
                 <h1>Contacts</h1>
-                <ContactsTable title='Industry Professionals' contacts={this.filterContactType(this.state.contacts, 'industry')} />
-                <ContactsTable title='Recruiters'contacts={this.filterContactType(this.state.contacts, 'recruiter')} />
-                <ContactsTable title='Other'contacts={this.filterContactType(this.state.contacts, 'other')} />
+                <ContactsTable title='Industry Professionals' contacts={this.filterContactType(this.props.contactList, 'industry')} />
+                <ContactsTable title='Recruiters'contacts={this.filterContactType(this.props.contactList, 'recruiter')} />
+                <ContactsTable title='Other'contacts={this.filterContactType(this.props.contactList, 'other')} />
             </React.Fragment>
         )
     }
@@ -33,7 +29,7 @@ class ContactsPage extends Component {
 }
 
 const mapPropsToState = (state) => {
-    return {contacts: state.contacts}
+    return {contactList: state.contacts.contactList}
 }
   
 export default connect(mapPropsToState, {...actions})(ContactsPage);

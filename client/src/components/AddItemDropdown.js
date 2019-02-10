@@ -8,7 +8,7 @@ class AddItemDropdown extends Component {
         return (
             <Dropdown alignRight>
                 <Dropdown.Toggle id="dropdown-basic">
-                    <i class="fa fa-plus" aria-hidden="true"></i>
+                    <i className="fa fa-plus" aria-hidden="true"></i>
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
