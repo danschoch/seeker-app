@@ -1,88 +1,85 @@
 import React, { Component } from 'react';
-import { Button, Modal, Form, Row, Col} from 'react-bootstrap';
+import { Button, Modal, Form} from 'react-bootstrap';
 // import '../css/contactsForm.css'
 
 class ContactForm extends Component {
 
-    state = {
-        show: false,
-    };
-  
-    handleClose = () => {
-      this.setState({ show: false });
+    capitalizeFirstLetter = (string) => {
+        return string.charAt(0).toUpperCase() + string.slice(1);
     }
-  
-    handleShow = () => {
-      this.setState({ show: true });
+
+    renderFormGroups = (attrList) => {
+        return attrList.map( attr => {
+            return (
+                <Form.Group controlId={`form${attr}`}>
+                    <Form.Label >{this.capitalizeFirstLetter(attr)}</Form.Label>
+                    <Form.Control onChange={this.props.handleChange} placeholder={this.capitalizeFirstLetter(attr)}/> 
+                </Form.Group>
+            )
+        })
     }
+
+
   
     render() {
-      return (
-          <React.Fragment>
-                <Button onClick={this.handleShow}>
-                    {this.props.title}
-                </Button>
+        return (
+            <Modal show={this.props.show} onHide={this.props.close}>
+                <Modal.Header closeButton>
+                    <Modal.Title>{this.props.title}</Modal.Title>
+                </Modal.Header>
 
-                <Modal show={this.state.show} onHide={this.handleClose}>
-                    <Modal.Header closeButton>
-                        <Modal.Title>{this.props.title}</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        <Form>
-                            <Form.Group controlId="formBasicName">
-                                <Form.Label >Name</Form.Label>
-                                <Row>
-                                    <Col sm={6}>
-                                        <Form.Control placeholder="First name" /> 
-                                    </Col>
-                                    <Col sm={6}>
-                                        <Form.Control placeholder="Last name" />
-                                    </Col>
-                                </Row>
-                            </Form.Group>
+                <Modal.Body>
+                    <Form onSubmit={this.props.handleSubmit}>
+                        {this.renderFormGroups(this.props.attrList)}
 
-                            <Form.Group controlId="addContactTitle">
-                                <Form.Label>Title</Form.Label>
-                                <Form.Control placeholder="Title" />
-                            </Form.Group>
 
-                            <Form.Group controlId="addContactEmail">
-                                <Form.Label>Email</Form.Label>
-                                <Form.Control placeholder="Email" />
-                            </Form.Group>
+                        {/* <Form.Group controlId="formBasicName">
+                            <Form.Label >Name</Form.Label>
+                            <Form.Control placeholder="First name" /> 
+                            <Form.Control placeholder="Last name" />
+                        </Form.Group>
 
-                            <Form.Group controlId="addContactPhone">
-                                <Form.Label>Phone Number</Form.Label>
-                                <Form.Control placeholder="Phone Number" />
-                            </Form.Group>
+                        <Form.Group controlId="addContactTitle">
+                            <Form.Label>Title</Form.Label>
+                            <Form.Control placeholder="Title" />
+                        </Form.Group>
 
-                            <Form.Group controlId="addContactWebsite">
-                                <Form.Label>Website</Form.Label>
-                                <Form.Control placeholder="Phone Number" />
-                            </Form.Group>
+                        <Form.Group controlId="addContactEmail">
+                            <Form.Label>Email</Form.Label>
+                            <Form.Control placeholder="Email" />
+                        </Form.Group>
 
-                            <Form.Group controlId="addContactOrg">
-                                <Form.Label>Select Organization</Form.Label>
-                                <Form.Control as="select">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </Form.Control>
-                            </Form.Group>
-                        </Form>
-                    </Modal.Body>
-                    
-                    <Modal.Footer>
-                        <Button variant="primary" onClick={this.handleClose}>
-                            Save Changes
-                        </Button>
-                    </Modal.Footer>
-                </Modal>
-          </React.Fragment>
-      );
+                        <Form.Group controlId="addContactPhone">
+                            <Form.Label>Phone Number</Form.Label>
+                            <Form.Control placeholder="Phone Number" />
+                        </Form.Group>
+
+                        <Form.Group controlId="addContactWebsite">
+                            <Form.Label>Website</Form.Label>
+                            <Form.Control placeholder="Websiter" />
+                        </Form.Group>
+
+                        <Form.Group controlId="addContactOrg">
+                            <Form.Label>Select Organization</Form.Label>
+                            <Form.Control as="select">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </Form.Control>
+                        </Form.Group> */}
+                    </Form>
+                </Modal.Body>
+                
+                <Modal.Footer>
+                    <Button variant="primary" onClick={this.handleSubmit}>
+                        Submit
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+        );
     }
-  }
+}
   
-  export default ContactForm;
+export default ContactForm;
