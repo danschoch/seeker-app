@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ContactsTable from '../components/CustomTable';
+import ContactsTable from '../components/ContactsTable';
 import '../css/ContactsPage.css'
 
 class ContactsPage extends Component {

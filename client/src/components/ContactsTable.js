@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { ReactComponent as ContactSvg } from '../css/contactIcon.svg';
 import ContactRow from './ContactRow';
-import Table from 'react-bootstrap/Table';
+import { Table } from 'react-bootstrap';
+import CustomTable from './CustomTable';
 import uuid from 'uuid';
 import '../css/Contacts.css';
 
-class CustomTable extends Component {
+
+class ContactsTable extends Component {
 
     /* TODO: Separate out stateless parts */
 
@@ -16,10 +18,10 @@ class CustomTable extends Component {
          - add form to create new contact
     */
 
-    renderRows = () => {
-        return this.props.dataList.map( dataItem => {
+    renderContactRows = () => {
+        return this.props.contacts.map( contact => {
             return (
-                <ContactRow key={uuid.v4()} data={dataItem} />
+                <ContactRow key={uuid.v4()} contact={contact} />
             )
         })
     }
@@ -36,7 +38,21 @@ class CustomTable extends Component {
                     </form>
                 </div>
 
-                <Table responsive bordered={ false } >
+                  <Table responsive bordered={ false } >
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Title</th>
+                                <th>Organization</th>
+                                <th>Last Contacted</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {this.renderContactRows()}
+                        </tbody>
+                    </Table> 
+
+                {/* <CustomTable columnNames dataRows >
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -48,11 +64,11 @@ class CustomTable extends Component {
                     <tbody>
                         {this.renderContactRows()}
                     </tbody>
-                </Table> 
+                </Table>  */}
             </div>
         )
     }
 
 }
 
-export default CustomTable
+export default ContactsTable

@@ -5,6 +5,7 @@ import TopNav from './containers/TopNav';
 import DashboardPage from './pages/DashboardPage';
 import ContactsPage from './pages/ContactsPage';
 import ActivitiesPage from './pages/ActivitiesPage';
+import OrganizationsPage from './pages/OrganizationsPage';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class App extends Component {
@@ -17,7 +18,7 @@ class App extends Component {
             <main>
               <Route path="/home" component={DashboardPage} />
               <Route exact path="/contacts" component={ContactsPage} />
-              <Route exact path="/activities" component={ActivitiesPage} />
+              <Route exact path="/organizations" component={OrganizationsPage} />
             </main>
           </React.Fragment>
         </Router>
