@@ -9,7 +9,7 @@ class AddItemDropdown extends Component {
         contactForm: {
             show: false,
             contactAttributes: {
-               firstName: '',
+                firstName: '',
                 lastName: '',
                 title: '',
                 email: '',
@@ -23,7 +23,7 @@ class AddItemDropdown extends Component {
     showContactForm = () => {
         this.setState({
             contactForm: {
-                ...this.state,
+                ...this.state.contactForm,
                 show: true
             }
         }) 
@@ -49,21 +49,19 @@ class AddItemDropdown extends Component {
     handleChange = (event) => {
         this.setState({
             contactForm: {
+                ...this.state.contactForm,
                 contactAttributes: {
-                   firstName: '',
-                    lastName: '',
-                    title: '',
-                    email: '',
-                    website: ''
+                   ...this.state.contactForm.contactAttributes,
+                   [event.target.id]: event.target.value
                 }
             }
         });
     }
 
     handleSubmit = (event) => {
-        // event.preventDefault();
+        event.preventDefault();
     
-        console.log(event)
+        console.log(this.state)
 
         this.setState({
             contactForm: {
@@ -93,7 +91,7 @@ class AddItemDropdown extends Component {
                     </Dropdown.Menu>
                 </Dropdown>
 
-                <ContactForm title='Add Contact' show={this.state.contactForm.show} close={this.closeContactForm} handleChange={this.handleChange} handleSubmit={this.handleSubmit} attrList={Object.keys(this.state.contactForm.contactAttributes)} />
+                <ContactForm title='Add Contact' show={this.state.contactForm.show} close={this.closeContactForm} handleChange={this.handleChange} handleSubmit={this.handleSubmit} attrList={Object.keys(this.state.contactForm.contactAttributes)}  />
             </React.Fragment>
         )
     }

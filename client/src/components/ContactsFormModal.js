@@ -11,7 +11,7 @@ class ContactForm extends Component {
     renderFormGroups = (attrList) => {
         return attrList.map( attr => {
             return (
-                <Form.Group controlId={`form${attr}`}>
+                <Form.Group key={attr} controlId={`${attr}`}>
                     <Form.Label >{this.capitalizeFirstLetter(attr)}</Form.Label>
                     <Form.Control onChange={this.props.handleChange} placeholder={this.capitalizeFirstLetter(attr)}/> 
                 </Form.Group>
@@ -69,14 +69,17 @@ class ContactForm extends Component {
                                 <option>5</option>
                             </Form.Control>
                         </Form.Group> */}
+                        <Button variant="primary" type='submit'>
+                            Submit
+                        </Button>
                     </Form>
                 </Modal.Body>
                 
-                <Modal.Footer>
-                    <Button variant="primary" onClick={this.handleSubmit}>
+                {/* <Modal.Footer>
+                    <Button variant="primary" type='submit'>
                         Submit
                     </Button>
-                </Modal.Footer>
+                </Modal.Footer> */}
             </Modal>
         );
     }
