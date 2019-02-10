@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../css/TopNav.css';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button'
+import {  Form, Button } from 'react-bootstrap';
+import AddItemDropdown from '../components/AddItemDropdown';
 
 class TopNav extends Component {
 
@@ -13,7 +13,19 @@ class TopNav extends Component {
                     <Button size='small' variant='outline-dark'><i className="fa fa-search"></i></Button>
                 </Form>
 
-                {/* <i class="fa fa-plus" aria-hidden="true"></i> */}
+                <AddItemDropdown />
+
+
+                {/* <Dropdown>
+                    <Dropdown.Toggle variant="success" id="dropdown-basic">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </Dropdown.Toggle>
+
+                    <Dropdown.Menu>
+                        <Dropdown.Item href="#/action-1">Add Contact</Dropdown.Item>
+                        <Dropdown.Item href="#/action-2">Add Organization</Dropdown.Item>
+                    </Dropdown.Menu>
+                </Dropdown> */}
             </div>
         )
     }    
