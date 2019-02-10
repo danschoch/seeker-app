@@ -41,24 +41,35 @@ class ContactForm extends Component {
                                 </Row>
                             </Form.Group>
 
-                            <Form.Group controlId="formBasicTitle">
+                            <Form.Group controlId="addContactTitle">
                                 <Form.Label>Title</Form.Label>
                                 <Form.Control placeholder="Title" />
                             </Form.Group>
 
-                            <Form.Group controlId="formBasicTitle">
+                            <Form.Group controlId="addContactEmail">
                                 <Form.Label>Email</Form.Label>
                                 <Form.Control placeholder="Email" />
                             </Form.Group>
 
-                            <Form.Group controlId="formBasicTitle">
+                            <Form.Group controlId="addContactPhone">
                                 <Form.Label>Phone Number</Form.Label>
                                 <Form.Control placeholder="Phone Number" />
                             </Form.Group>
 
-                            <Form.Group controlId="formBasicTitle">
+                            <Form.Group controlId="addContactWebsite">
                                 <Form.Label>Website</Form.Label>
                                 <Form.Control placeholder="Phone Number" />
+                            </Form.Group>
+
+                            <Form.Group controlId="addContactOrg">
+                                <Form.Label>Select Organization</Form.Label>
+                                <Form.Control as="select">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </Form.Control>
                             </Form.Group>
                         </Form>
                     </Modal.Body>
