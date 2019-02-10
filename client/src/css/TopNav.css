@@ -4,30 +4,66 @@
     grid-row-start: 1;
     grid-row-end: span 1;
     display: flex;
+    justify-content: space-between;
+    background-color: white;
 }
 
-#topNav form {
+#topNavSearch {
     flex: auto;
     box-shadow: 0 2px  rgba(0, 0, 0, .04);
     display: flex;
 }
 
-#topNav form input {
+#topNavSearch input {
     height: 55px;
     border: none;
     flex: auto;
-
+    padding-left: 30px;
 }
 
-#topNav form button {
+#topNavSearch button {
     height: 55px;
     width: 55px;
-    background-color: white;
     border-radius: 0;
     border: none;
-
 }
 
-#topNav form button i {
+#topNavSearchbutton i {
+    color: #BCBCCB;
     font-size: 20px; 
+}
+
+#topNav .dropdown{
+    margin: auto 20px auto 25px;
+}
+
+#topNav .dropdown .btn-primary{
+    color: #BCBCCB;
+    background: white;
+    border: none;
+}
+
+.dropdown-item .btn-primary {
+    color: #4D4F5C !important;
+}
+
+.dropdown-item:hover {
+    background: none;
+}
+
+#topNav span {
+    display: block;
+    background-color: lightgray;
+    margin: auto 0;
+    height: 30px;
+    width: 1px;
+}
+
+#topNav #profileContainer{
+    margin: auto 20px;
+    justify-self: flex-end;
+}
+
+#topNav #profileContainer p{
+    margin: 0;
 }

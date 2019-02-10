@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Modal, Form} from 'react-bootstrap';
+import { Button, Modal, Form, Row, Col} from 'react-bootstrap';
 // import '../css/contactsForm.css'
 
 class ContactForm extends Component {
@@ -30,8 +30,15 @@ class ContactForm extends Component {
                     <Modal.Body>
                         <Form>
                             <Form.Group controlId="formBasicName">
-                                <Form.Label>Email address</Form.Label>
-                                <Form.Control placeholder="First name" /> <Form.Control placeholder="Last name" />
+                                <Form.Label >Name</Form.Label>
+                                <Row>
+                                    <Col sm={6}>
+                                        <Form.Control placeholder="First name" /> 
+                                    </Col>
+                                    <Col sm={6}>
+                                        <Form.Control placeholder="Last name" />
+                                    </Col>
+                                </Row>
                             </Form.Group>
 
                             <Form.Group controlId="formBasicTitle">

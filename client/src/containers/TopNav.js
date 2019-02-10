@@ -8,24 +8,16 @@ class TopNav extends Component {
     render() {
         return(
             <div id='topNav'>
-                <Form inline='true'>
+                <Form inline='true' id='topNavSearch'>
                     <Form.Control type='text' placeholder="Search activities or contacts" />
                     <Button size='small' variant='outline-dark'><i className="fa fa-search"></i></Button>
                 </Form>
 
                 <AddItemDropdown />
-
-
-                {/* <Dropdown>
-                    <Dropdown.Toggle variant="success" id="dropdown-basic">
-                        <i class="fa fa-plus" aria-hidden="true"></i>
-                    </Dropdown.Toggle>
-
-                    <Dropdown.Menu>
-                        <Dropdown.Item href="#/action-1">Add Contact</Dropdown.Item>
-                        <Dropdown.Item href="#/action-2">Add Organization</Dropdown.Item>
-                    </Dropdown.Menu>
-                </Dropdown> */}
+                <span className='rectangle'/>
+                <div id='profileContainer'>
+                    <p>Username &or;   &#9711;</p>
+                </div>
             </div>
         )
     }    
