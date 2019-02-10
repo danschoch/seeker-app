@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import { connect } from 'react-redux';
+import * as dataActions from './actions/dataActions.js';
 import SideBar from './containers/SideBar';
 import TopNav from './containers/TopNav';
 import DashboardPage from './pages/DashboardPage';
@@ -24,6 +26,12 @@ class App extends Component {
         </Router>
     );
   }
+
+  componentDidMount() {
+    this.props.fetchContacts();
+    this.props.fetchOrganizations();
+  }
 }
 
-export default App;
+
+export default connect(null, {...dataActions})(App)

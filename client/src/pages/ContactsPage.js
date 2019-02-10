@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ContactsTable from '../components/ContactsTable';
 import { connect } from 'react-redux';
-import * as actions from '../actions/contactActions.js';
 import '../css/ContactsPage.css'
 
 class ContactsPage extends Component {
@@ -22,14 +21,10 @@ class ContactsPage extends Component {
             </React.Fragment>
         )
     }
-
-    componentDidMount() {
-        this.props.fetchContacts()
-    }
 }
 
 const mapPropsToState = (state) => {
     return {contactList: state.contacts.contactList}
 }
   
-export default connect(mapPropsToState, {...actions})(ContactsPage);
+export default connect(mapPropsToState)(ContactsPage);

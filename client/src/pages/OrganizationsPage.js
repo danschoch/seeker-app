@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import ContactsTable from '../components/CustomTable';
+import { connect } from 'react-redux';
 import '../css/ContactsPage.css'
 
 class OrganizationsPage extends Component {
 
-    state = {
-        organizations: []
-    }
-
     render() {
+        console.log(this.props.orgsList)
         return(
             <React.Fragment>
                 <h1>Organizations</h1>
@@ -16,16 +14,10 @@ class OrganizationsPage extends Component {
             </React.Fragment>
         )
     }
-
-    componentDidMount() {
-        fetch('/organizations')
-        .then(response => response.json())
-        .then(data => {
-            this.setState({
-                organizations: data
-            })
-        })
-    }
 }
 
-export default OrganizationsPage
+const mapPropsToState = (state) => {
+    return {orgsList: state.organizations.orgsList}
+}
+
+export default connect(mapPropsToState)( OrganizationsPage);
