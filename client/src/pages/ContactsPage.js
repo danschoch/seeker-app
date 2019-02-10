@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import ContactsTable from '../components/ContactsTable';
+import { connect } from 'react-redux';
+import * as actions from '../actions/contactActions.js';
 import '../css/ContactsPage.css'
 
 class ContactsPage extends Component {
@@ -15,7 +17,6 @@ class ContactsPage extends Component {
     }
 
     render() {
-        console.log(this.filterContactType(this.state.contacts, 'other'))
         return(
             <React.Fragment>
                 <h1>Contacts</h1>
@@ -27,14 +28,12 @@ class ContactsPage extends Component {
     }
 
     componentDidMount() {
-        fetch('/contacts')
-        .then(response => response.json())
-        .then(data => {
-            this.setState({
-                contacts: data
-            })
-        })
+        this.props.fetchContacts()
     }
 }
 
-export default ContactsPage
+const mapPropsToState = (state) => {
+    return {contacts: state.contacts}
+}
+  
+export default connect(mapPropsToState, {...actions})(ContactsPage);
