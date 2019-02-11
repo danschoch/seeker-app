@@ -21,6 +21,7 @@ class App extends Component {
               <Route path="/home" component={DashboardPage} />
               <Route exact path="/contacts" component={ContactsPage} />
               <Route exact path="/organizations" component={OrganizationsPage} />
+              <Route exact path="/activities" component={ActivitiesPage} />
             </main>
           </React.Fragment>
         </Router>

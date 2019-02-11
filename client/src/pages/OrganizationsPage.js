@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ContactsTable from '../components/CustomTable';
 import { connect } from 'react-redux';
-import '../css/ContactsPage.css'
 
 class OrganizationsPage extends Component {
 

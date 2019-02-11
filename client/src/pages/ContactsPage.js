@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import ContactsTable from '../components/ContactsTable';
 import { connect } from 'react-redux';
-import '../css/ContactsPage.css'
 
 class ContactsPage extends Component {
 
     filterContactType = (contactList, type) => {
         return contactList.filter( contact => {
-            return contact.contact_type === type
+            return contact.contactType === type
         })
     }
 
@@ -18,6 +17,7 @@ class ContactsPage extends Component {
                 <ContactsTable title='Industry Professionals' contacts={this.filterContactType(this.props.contactList, 'industry')} />
                 <ContactsTable title='Recruiters'contacts={this.filterContactType(this.props.contactList, 'recruiter')} />
                 <ContactsTable title='Other'contacts={this.filterContactType(this.props.contactList, 'other')} />
+                <ContactsTable title='No Type'contacts={this.filterContactType(this.props.contactList, null)} />
             </React.Fragment>
         )
     }
