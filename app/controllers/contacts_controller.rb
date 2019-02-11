@@ -8,7 +8,7 @@ class ContactsController < ApplicationController
 
     def create
         @contact = Contact.new(contact_params)
-        @organization = Organization.find_or_create_by!(name: params[:organization])
+        @organization = Organization.find_or_create_by!(name: params[:organization]) if params[:organization]
         @contact.organization = @organization
         @contact.save!
         json_response(@contact, :created)
@@ -27,7 +27,7 @@ class ContactsController < ApplicationController
     private
 
     def contact_params
-        params.permit(:first_name, :last_name, :phone_number, :email, :website, :linkedin)
+        params.require(:contact).permit(:first_name, :last_name, :phone_number, :email, :website, :linkedin, :title)
     end
 
     def set_contact
