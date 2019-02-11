@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Button, Form} from 'react-bootstrap';
 import { connect } from 'react-redux';
 import * as dataActions from '../../actions/dataActions.js';
-// import '../css/contactsForm.css'
 
 class ContactForm extends Component {
 
@@ -12,7 +11,8 @@ class ContactForm extends Component {
         title: '',
         email: '',
         website: '',
-        phoneNumber: ''
+        phoneNumber: '',
+        contactType: null
     };
     
     ////// CAN BE USED TO ABSTRACT FORM TO ITS OWN FILE, MAYBE
@@ -32,8 +32,6 @@ class ContactForm extends Component {
             ...this.state,
             [event.target.id]: event.target.value
         });
-
-        console.log(this.state);
     }
 
     handleSubmit = (event) => {

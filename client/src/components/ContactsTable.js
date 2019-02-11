@@ -14,7 +14,6 @@ class ContactsTable extends Component {
     /* 
         TODO on other pages:
          - Add organizations page with table component (this will be my third route/page)
-         - add form to create new contact
     */
 
     renderContactRows = () => {

@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import Moment from 'react-moment';
 
 class ContactRow extends Component {
+    renderOrg = (org) => {
+        if (org === null) {
+            return "None"
+        } else {
+            return org.name
+        }
+    }
 
     render() {
         const { contact } = this.props;
@@ -9,9 +16,9 @@ class ContactRow extends Component {
 
         return (
             <tr>
-                <td id='contactName'>{contact.first_name} {contact.last_name}</td>
+                <td id='contactName'>{contact.firstName} {contact.lastName}</td>
                 <td>{contact.title}</td>
-                <td>{contact.organization.name}</td>
+                <td>{this.renderOrg(contact.organization)}</td>
                 <td>{formattedDate}</td>
             </tr>
         )
