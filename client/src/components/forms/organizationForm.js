@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Modal, Form} from 'react-bootstrap';
+import { Button, Form} from 'react-bootstrap';
 // import '../css/contactsForm.css'
 
 class OrganizationForm extends Component {

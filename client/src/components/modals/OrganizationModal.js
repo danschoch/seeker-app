@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Modal, Form} from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
 import OrganizationForm from '../forms/organizationForm';
 // import '../css/contactsForm.css'
 

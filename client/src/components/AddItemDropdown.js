@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Dropdown, Button, Modal, Form} from 'react-bootstrap';
+import { Dropdown } from 'react-bootstrap';
 import ContactModal from './modals/ContactModal';
 import OrganizationModal from './modals/OrganizationModal';
 

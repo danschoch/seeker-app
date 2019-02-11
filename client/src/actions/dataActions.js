@@ -21,3 +21,21 @@ export function fetchContacts() {
       })
     };
 }
+
+export function addContact(data) {
+
+  return (dispatch) => {
+    return fetch('/contacts', {
+        method: "POST",
+        headers: { 
+          "Content-Type": "application/json",
+          "X-Key-Inflection": "camel"
+        },
+        body: JSON.stringify(data)
+    }).then(response => {
+      return response.json()
+    }).then(responseJSON => {
+      return dispatch({type: 'ADD_CONTACT', payload: responseJSON})
+    });
+  }
+}

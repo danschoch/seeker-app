@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Modal, Form} from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
 import ContactForm from '../forms/contactForm';
 // import '../css/contactsForm.css'
 
@@ -24,7 +24,7 @@ class ContactModal extends Component {
   
     render() {
         return (
-            <Modal show={this.props.show} onHide={this.props.close}>
+            <Modal show={this.props.show} onHide={this.props.close} >
                 <Modal.Header closeButton>
                     <Modal.Title>{this.props.title}</Modal.Title>
                 </Modal.Header>

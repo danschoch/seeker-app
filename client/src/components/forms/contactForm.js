@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Button, Modal, Form} from 'react-bootstrap';
+import { Button, Form} from 'react-bootstrap';
+import { connect } from 'react-redux';
+import * as dataActions from '../../actions/dataActions.js';
 // import '../css/contactsForm.css'
 
 class ContactForm extends Component {
@@ -37,10 +39,7 @@ class ContactForm extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
 
-        //pass in prop with add or edit action
-        //this.props.submitAction
-    
-        console.log(this.state)
+        this.props.addContact(this.state);
 
         this.setState({
             firstName: '',
@@ -105,4 +104,4 @@ class ContactForm extends Component {
     }
 }
   
-export default ContactForm;
+export default connect(null, {...dataActions})(ContactForm);
