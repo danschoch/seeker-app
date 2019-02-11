@@ -18,7 +18,6 @@ export function fetchContacts() {
       .then(response => {
         return response.json()
       }).then(responseJSON => {
-        console.log(responseJSON);
         return dispatch({type: 'FETCH_CONTACTS', payload: responseJSON})
       })
     };

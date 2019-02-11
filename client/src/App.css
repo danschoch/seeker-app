@@ -15,6 +15,7 @@ main {
     flex-wrap: wrap;
     justify-content: space-evenly;
     font-family: "Source Sans Pro", sans-serif;
+    align-content: flex-start;
 }
 
 h1:first-child {
@@ -27,6 +28,6 @@ h1:first-child {
 
 @media screen and (min-width: 1500px) {
     #root {
-        width: 1600px;
+        width: 1500px;
     }
   }
