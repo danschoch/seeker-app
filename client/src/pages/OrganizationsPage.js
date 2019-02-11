@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import ContactsTable from '../components/CustomTable';
+import OrganizationsTable from '../components/OrganizationsTable';
 import { connect } from 'react-redux';
 
 class OrganizationsPage extends Component {
 
     render() {
-        console.log(this.props.orgsList)
         return(
             <React.Fragment>
                 <h1>Organizations</h1>
-                {/* <ContactsTable title='Industry Professionals' contacts={this.state.organizations} /> */}
+                <OrganizationsTable title='All Organizations' orgs={this.props.orgsList} />
             </React.Fragment>
         )
     }

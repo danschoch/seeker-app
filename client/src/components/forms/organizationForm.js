@@ -6,7 +6,7 @@ class OrganizationForm extends Component {
     state = {
         name: '',
         about: '',
-        phone_number: '',
+        phoneNumber: '',
         website: '',
         email: ''
     };
