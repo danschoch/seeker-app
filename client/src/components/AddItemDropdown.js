@@ -1,82 +1,45 @@
 import React, { Component } from 'react';
 import { Dropdown, Button, Modal, Form} from 'react-bootstrap';
-import ContactForm from '../components/ContactsFormModal';
+import ContactModal from './modals/ContactModal';
+import OrganizationModal from './modals/OrganizationModal';
 
 
 class AddItemDropdown extends Component {
 
     state = {
-        contactForm: {
-            show: false,
-            contactAttributes: {
-                firstName: '',
-                lastName: '',
-                title: '',
-                email: '',
-                website: ''
-            }   
-        }
+        contactForm: false,
+        organizationForm: false
     };
 
 
-    // Modal Handlers
+    //Contact Modal Handlers
     showContactForm = () => {
         this.setState({
-            contactForm: {
-                ...this.state.contactForm,
-                show: true
-            }
+            contactForm: true
         }) 
     }
 
     closeContactForm = () => {
         this.setState({
-            contactForm: {
-                show: false,
-                contactAttributes: {
-                   firstName: '',
-                    lastName: '',
-                    title: '',
-                    email: '',
-                    website: ''
-                }
-            }
+            contactForm: false
+        })
+    }
+
+    //Organization Modal Handlers
+    showOrganizationForm = () => {
+        this.setState({
+            organizationForm: true
+        }) 
+    }
+
+    closeOrganizationForm = () => {
+        this.setState({
+            organizationForm: false
         })
     }
 
 
-    // Form Handlers
-    handleChange = (event) => {
-        this.setState({
-            contactForm: {
-                ...this.state.contactForm,
-                contactAttributes: {
-                   ...this.state.contactForm.contactAttributes,
-                   [event.target.id]: event.target.value
-                }
-            }
-        });
-    }
-
-    handleSubmit = (event) => {
-        event.preventDefault();
-    
-        console.log(this.state)
-
-        this.setState({
-            contactForm: {
-                show: false,
-                contactAttributes: {
-                   firstName: '',
-                    lastName: '',
-                    title: '',
-                    email: '',
-                    website: ''
-                }
-            }
-        });
-    };
-
+   // Render Dropdown and Modals
     render() {
         return (
             <React.Fragment>
@@ -87,11 +50,12 @@ class AddItemDropdown extends Component {
 
                     <Dropdown.Menu>
                         <Dropdown.Item as='button' onClick={this.showContactForm} >Add Contact</Dropdown.Item>
-                        <Dropdown.Item as='button' >Add Organization</Dropdown.Item>
+                        <Dropdown.Item as='button' onClick={this.showOrganizationForm} >Add Organization</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
 
-                <ContactForm title='Add Contact' show={this.state.contactForm.show} close={this.closeContactForm} handleChange={this.handleChange} handleSubmit={this.handleSubmit} attrList={Object.keys(this.state.contactForm.contactAttributes)}  />
+                <ContactModal title='Add Contact' show={this.state.contactForm} close={this.closeContactForm} submitAction={this.props.addContact}/>
+                <OrganizationModal title='Add Organization' show={this.state.organizationForm} close={this.closeOrganizationForm} submitAction={this.props.addContact} />
             </React.Fragment>
         )
     }
