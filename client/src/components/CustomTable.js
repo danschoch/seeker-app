@@ -7,15 +7,6 @@ import '../css/Contacts.css';
 
 class CustomTable extends Component {
 
-    /* TODO: Separate out stateless parts */
-
-    /* 
-        TODO on other pages:
-         - Add organizations page with table component (this will be my third route/page)
-         - implement redux
-         - add form to create new contact
-    */
-
     renderRows = () => {
         return this.props.dataList.map( dataItem => {
             return (

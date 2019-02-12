@@ -18,7 +18,8 @@ class App extends Component {
             <SideBar />
             <TopNav />
             <main>
-              <Route path="/home" component={DashboardPage} />
+              <Route exact path="/" component={DashboardPage} />
+              <Route exact path="/home" component={DashboardPage} />
               <Route exact path="/contacts" component={ContactsPage} />
               <Route exact path="/organizations" component={OrganizationsPage} />
               <Route exact path="/activities" component={ActivitiesPage} />
@@ -36,3 +37,4 @@ class App extends Component {
 
 
 export default connect(null, {...dataActions})(App)
+  

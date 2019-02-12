@@ -9,13 +9,6 @@ import '../css/Contacts.css';
 
 class ContactsTable extends Component {
 
-    /* TODO: Separate out stateless parts */
-
-    /* 
-        TODO on other pages:
-         - Add organizations page with table component (this will be my third route/page)
-    */
-
     renderContactRows = () => {
         return this.props.contacts.map( contact => {
             return (
@@ -36,19 +29,19 @@ class ContactsTable extends Component {
                     </form>
                 </div>
 
-                  <Table responsive bordered={ false } >
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Title</th>
-                                <th>Organization</th>
-                                <th>Last Contacted</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {this.renderContactRows()}
-                        </tbody>
-                    </Table> 
+                <Table responsive bordered={ false } >
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Title</th>
+                            <th>Organization</th>
+                            <th>Last Contacted</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {this.renderContactRows()}
+                    </tbody>
+                </Table> 
 
                 {/* <CustomTable columnNames dataRows >
                     <thead>
