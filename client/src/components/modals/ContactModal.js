@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Modal } from 'react-bootstrap';
 import ContactForm from '../forms/contactForm';
-// import '../css/contactsForm.css'
 
 class ContactModal extends Component {
 
