@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Button, Form} from 'react-bootstrap';
 import { connect } from 'react-redux';
 import * as dataActions from '../../actions/dataActions.js';
-import ChangeItemForm from '../forms/CustomForm';
+import TextInput from './TextInput';
+import SelectInput from './SelectInput';
 
 class ContactForm extends Component {
 
@@ -13,21 +14,38 @@ class ContactForm extends Component {
         email: '',
         website: '',
         phoneNumber: '',
-        contactType: null 
+        contactType: {
+            value: '',
+            options: ['industry', 'recruiter', 'other']
+        }  
     };
 
      // Form Handlers
-    handleChange = (event) => {
+    handleSelectChange = ( event ) => {
+        this.setState({
+            ...this.state,
+            [event.target.id]: {
+                ...this.state[event.target.id],
+                value: event.target.value
+            }
+        });
+    }
+
+    handleTextChange = ( event ) => {
         this.setState({
             ...this.state,
             [event.target.id]: event.target.value
-        });
+        }); 
     }
+
 
     handleSubmit = (event) => {
         event.preventDefault();
 
-        this.props.addContact(this.state);
+        this.props.addContact({
+            ...this.state,
+            contactType: this.state.contactType.value
+        });
 
         this.setState({
             firstName: '',
@@ -35,17 +53,43 @@ class ContactForm extends Component {
             title: '',
             email: '',
             website: '',
-            phoneNumber: ''
+            phoneNumber: '',
+            contactType: {
+                value: '',
+                options: ['industry', 'recruiter', 'other']
+            }
         });
 
         this.props.handleClose()
     };
 
+    // Render Inputs
+    renderInputs = () => {
+        return Object.keys(this.state).map( input => {
+            const realInput = this.state[input]
+           if (typeof realInput === 'object') {
+                 return <SelectInput  key={input} attr={input} handleChange={this.handleSelectChange} value={realInput.value} options={realInput.options} />
+           } else {
+               return <TextInput key={input} attr={input} handleChange={this.handleTextChange} value={realInput} />
+           }
+          
+       });
+    }
+
+
+
     render() {
-        debugger
         return (
-            <ChangeItemForm propertyList={this.state.properties} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
-            // <Form onSubmit={this.handleSubmit}>
+           
+            <Form onSubmit={this.handleSubmit}>
+                {this.renderInputs()}
+
+                <Button variant="primary" type='submit'>
+                    Submit
+                </Button>
+            </Form>
+            
+            /* // <Form onSubmit={this.handleSubmit}>
             //     <Form.Group controlId="firstName">
             //         <Form.Label >First Name</Form.Label>
             //         <Form.Control onChange={this.handleChange} placeholder="First name" /> 
@@ -86,10 +130,8 @@ class ContactForm extends Component {
                         <option>5</option>
                     </Form.Control>
                 </Form.Group> */
-            //     <Button variant="primary" type='submit'>
-            //         Submit
-            //     </Button>
-            // </Form>
+            //    
+            // </Form> */}
         );
     }
 }

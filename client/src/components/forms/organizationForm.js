@@ -13,6 +13,7 @@ class OrganizationForm extends Component {
 
      // Form Handlers
     handleChange = (event) => {
+        console.log(event.target)
         this.setState({
             ...this.state,
             [event.target.id]: event.target.value
@@ -38,7 +39,7 @@ class OrganizationForm extends Component {
             <Form onSubmit={this.handleSubmit}>
                 <Form.Group controlId="name">
                     <Form.Label >Organization Name</Form.Label>
-                    <Form.Control placeholder="Name" />
+                    <Form.Control onChange={this.handleChange} placeholder="Name" />
                 </Form.Group>
 
                 <Form.Group controlId="website">

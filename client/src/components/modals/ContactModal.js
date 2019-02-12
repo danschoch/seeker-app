@@ -4,21 +4,8 @@ import ContactForm from '../forms/contactForm';
 
 class ContactModal extends Component {
 
-   
-
     // capitalizeFirstLetter = (string) => {
     //     return string.charAt(0).toUpperCase() + string.slice(1);
-    // }
-
-    // renderFormGroups = (attrList) => {
-    //     return attrList.map( attr => {
-    //         return (
-    //             <Form.Group key={attr} controlId={`${attr}`}>
-    //                 <Form.Label >{this.capitalizeFirstLetter(attr)}</Form.Label>
-    //                 <Form.Control onChange={this.handleChange} placeholder={this.capitalizeFirstLetter(attr)}/> 
-    //             </Form.Group>
-    //         )
-    //     })
     // }
   
     render() {

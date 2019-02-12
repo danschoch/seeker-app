@@ -24,7 +24,6 @@ export function fetchContacts() {
 }
 
 export function addContact(data) {
-
   return (dispatch) => {
     return fetch('/contacts', {
         method: "POST",
