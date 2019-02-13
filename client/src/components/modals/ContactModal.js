@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Modal } from 'react-bootstrap';
 import ContactForm from '../forms/contactForm';
 
-class ContactModal extends Component {
+class CustomModal extends Component {
 
     // capitalizeFirstLetter = (string) => {
     //     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -16,7 +16,8 @@ class ContactModal extends Component {
                 </Modal.Header>
 
                 <Modal.Body>
-                   <ContactForm action={this.props.submitAction} handleClose={this.props.close} />
+                    {this.props.children}
+                   {/* <ContactForm action={this.props.submitAction} handleClose={this.props.close} /> */}
                 </Modal.Body>
                 
             </Modal>
@@ -24,4 +25,4 @@ class ContactModal extends Component {
     }
 }
   
-export default ContactModal;
+export default CustomModal;
