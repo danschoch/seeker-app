@@ -1,27 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class OrgRow extends Component {
-    renderPOC = (contact) => {
-        if (contact === null || []) {
-            return "N/A"
-        } else {
-            return `${contact.firstName} ${contact.lastName}`
-        }
+
+const renderPOC = (contact) => {
+    if (contact === null || []) {
+        return "N/A"
+    } else {
+        return `${contact.firstName} ${contact.lastName}`
     }
-
-    render() {
-        const { org } = this.props;
-
-        return (
-            <tr>
-                <td id='orgName'>{org.name}</td>
-                <td>{this.renderPOC(org.contacts[0])}</td>
-                <td className='indentToCenter'>{org.contacts.length}</td>
-                <td>{org.website}</td>
-            </tr>
-        )
-    }
-    
 }
+
+const OrgRow = ({ org }) => {
+    return (
+        <tr>
+            <td id='orgName'>{org.name}</td>
+            <td>{renderPOC(org.contacts[0])}</td>
+            <td className='indentToCenter'>{org.contacts.length}</td>
+            <td>{org.website}</td>
+        </tr>
+    )
+}
+
 
 export default OrgRow;
