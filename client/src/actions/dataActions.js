@@ -10,6 +10,23 @@ export function fetchOrganizations() {
     };
 }
 
+export function addOrganization(data) {
+  return (dispatch) => {
+    return fetch('/organizations', {
+        method: "POST",
+        headers: { 
+          "Content-Type": "application/json",
+          "X-Key-Inflection": "camel"
+        },
+        body: JSON.stringify(data)
+    }).then(response => {
+      return response.json()
+    }).then(responseJSON => {
+      return dispatch({type: 'ADD_ORGANIZATION', payload: responseJSON})
+    });
+  }
+}
+
 export function fetchContacts() {
     
     return (dispatch) => {
