@@ -140,7 +140,7 @@ main {align-content: flex-start;}
     padding: 0.8em;
   }
 
-  .table tbody tr td:nth-child(3) {
+  .table tbody tr td.indentToCenter {
     text-indent: 3em;
   }
 

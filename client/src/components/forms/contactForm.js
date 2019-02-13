@@ -37,7 +37,7 @@ class ContactForm extends Component {
             [event.target.id]: event.target.value
         }); 
     }
-
+    
 
     handleSubmit = (event) => {
         event.preventDefault();

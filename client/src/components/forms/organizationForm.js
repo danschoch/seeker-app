@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
-import { Button, Form} from 'react-bootstrap';
+import { Button, Form } from 'react-bootstrap';
+import { connect } from 'react-redux';
+import * as dataActions from '../../actions/dataActions.js';
+import TextInput from './TextInput';
+import SelectInput from './SelectInput';
+
 
 class OrganizationForm extends Component {
 
@@ -13,16 +18,29 @@ class OrganizationForm extends Component {
     };
 
      // Form Handlers
-    handleChange = (event) => {
-        console.log(event.target)
+    handleSelectChange = ( event ) => {
+        this.setState({
+            ...this.state,
+            [event.target.id]: {
+                ...this.state[event.target.id],
+                value: event.target.value
+            }
+        });
+    }
+
+    handleTextChange = ( event ) => {
         this.setState({
             ...this.state,
             [event.target.id]: event.target.value
-        });
+        }); 
     }
 
     handleSubmit = (event) => {
         event.preventDefault();
+
+        this.props.addOrganization({
+            ...this.state,
+        });
 
         this.setState({
             name: '',
@@ -35,33 +53,23 @@ class OrganizationForm extends Component {
         this.props.handleClose()
     };
 
+    // Render Inputs
+    renderInputs = () => {
+        return Object.keys(this.state).map( input => {
+            const realInput = this.state[input]
+           if (typeof realInput === 'object') {
+                 return <SelectInput  key={input} attr={input} handleChange={this.handleSelectChange} value={realInput.value} options={realInput.options} />
+           } else {
+               return <TextInput key={input} attr={input} handleChange={this.handleTextChange} value={realInput} />
+           }
+          
+       });
+    }
+
     render() {
         return (
             <Form onSubmit={this.handleSubmit}>
-                <Form.Group controlId="name">
-                    <Form.Label >Organization Name</Form.Label>
-                    <Form.Control onChange={this.handleChange} placeholder="Name" />
-                </Form.Group>
-
-                <Form.Group controlId="website">
-                    <Form.Label>Website</Form.Label>
-                    <Form.Control placeholder="Website" />
-                </Form.Group>
-
-                <Form.Group controlId="email">
-                    <Form.Label>Email</Form.Label>
-                    <Form.Control placeholder="Email" />
-                </Form.Group>
-
-                <Form.Group controlId="phoneNumber">
-                    <Form.Label>Phone Number</Form.Label>
-                    <Form.Control placeholder="Phone Number" />
-                </Form.Group>
-
-                <Form.Group controlId="about">
-                    <Form.Label>About</Form.Label>
-                    <Form.Control type='textarea' placeholder="About" />
-                </Form.Group>
+                {this.renderInputs()}
 
                 <Button variant="primary" type='submit'>
                     Submit
@@ -71,4 +79,4 @@ class OrganizationForm extends Component {
     }
 }
   
-export default OrganizationForm;
+export default connect(null, {...dataActions})(OrganizationForm);
