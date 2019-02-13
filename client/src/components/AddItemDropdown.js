@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Dropdown } from 'react-bootstrap';
-import CustomModal from './modals/ContactModal';
+import CustomModal from './modals/CustomModal';
 import OrganizationModal from './modals/OrganizationModal';
-import ContactForm from './forms/contactForm'
+import ContactForm from './forms/contactForm';
+import OrganizationForm from './forms/organizationForm';
 
 
 class AddItemDropdown extends Component {
@@ -55,12 +56,14 @@ class AddItemDropdown extends Component {
                     </Dropdown.Menu>
                 </Dropdown>
 
-                <CustomModal show={this.state.contactForm} close={this.closeContactForm} submitAction={this.props.addContact} title='Add Contact' >
+                <CustomModal show={this.state.contactForm} close={this.closeContactForm} title='Add Contact' >
                    <ContactForm handleClose={this.closeContactForm} />
                 </CustomModal>
 
-                {/* <ContactModal title='Add Contact' show={this.state.contactForm} close={this.closeContactForm} submitAction={this.props.addContact}/> */}
-                <OrganizationModal title='Add Organization' show={this.state.organizationForm} close={this.closeOrganizationForm} submitAction={this.props.addContact} />
+                <CustomModal show={this.state.organizationForm} close={this.closeOrganizationForm} title='Add Organization' >
+                   <OrganizationForm handleClose={this.closeOrganizationForm} />
+                </CustomModal>
+
             </React.Fragment>
         )
     }
