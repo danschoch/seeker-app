@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../css/TopNav.css';
 import {  Form, Button } from 'react-bootstrap';
-import AddItemDropdown from '../components/AddItemDropdown';
+import AddItemContainer from '../containers/AddItemContainer';
 
 class TopNav extends Component {
 
@@ -13,7 +13,7 @@ class TopNav extends Component {
                     <Button size='small' variant='outline-dark'><i className="fa fa-search"></i></Button>
                 </Form>
 
-                <AddItemDropdown />
+                <AddItemContainer />
                 <span className='rectangle'/>
                 <div id='profileContainer'>
                     <p>Username &or;   &#9711;</p>
