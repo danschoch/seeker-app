@@ -17,7 +17,7 @@ const ContactRow = ({ contact }) => {
             <td id='contactName'>{contact.firstName} {contact.lastName}</td>
             <td>{contact.title}</td>
             <td>{renderOrg(contact.organization)}</td>
-            <td>{formattedDate}</td>
+            <td>{contact.email}</td>
         </tr>
     )
 }

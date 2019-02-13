@@ -127,24 +127,22 @@
     width: 100%;
   }
 
+  .table tbody tr td#contactName {
+      font-size: 1.9vh;
+      color: #43425D;
+      opacity: 1;
+      width: 25%;
+      border-top: 1px solid rgba(222, 226, 230, 0.5);
+  }
+
   .table tbody tr td {
     font-size: 1.7vh;
     color: #4D4F5C;
     opacity: 0.5;
     border-top: 1px solid rgba(222, 226, 230);
-    width: 24%;
+    width: 25%;
     padding: 0.8em;
   }
-
-  .table tbody tr td#contactName {
-    font-size: 1.9vh;
-    color: #43425D;
-    opacity: 1;
-    width: 28%;
-    border-top: 1px solid rgba(222, 226, 230, 0.5);
-  }
-
-
 
 /***** Media Queries *****/
 

@@ -35,27 +35,13 @@ class ContactsTable extends Component {
                             <th>Name</th>
                             <th>Title</th>
                             <th>Organization</th>
-                            <th>Last Contacted</th>
+                            <th>Email</th>
                         </tr>
                     </thead>
                     <tbody>
                         {this.renderContactRows()}
                     </tbody>
                 </Table> 
-
-                {/* <CustomTable columnNames dataRows >
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Title</th>
-                            <th>Organization</th>
-                            <th>Last Contacted</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {this.renderContactRows()}
-                    </tbody>
-                </Table>  */}
             </div>
         )
     }
