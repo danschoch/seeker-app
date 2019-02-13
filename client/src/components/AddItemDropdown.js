@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Dropdown } from 'react-bootstrap';
 import CustomModal from './modals/CustomModal';
-import OrganizationModal from './modals/OrganizationModal';
 import ContactForm from './forms/contactForm';
 import OrganizationForm from './forms/organizationForm';
 

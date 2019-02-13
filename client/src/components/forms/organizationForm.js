@@ -4,6 +4,7 @@ import { Button, Form} from 'react-bootstrap';
 class OrganizationForm extends Component {
 
     state = {
+        // {...this.props.initialState}
         name: '',
         about: '',
         phoneNumber: '',

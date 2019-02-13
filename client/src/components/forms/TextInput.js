@@ -1,18 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Form } from 'react-bootstrap';
 
-class TextInput extends Component {
-
-
-    render() {
-        const { attr, value, handleChange } = this.props
-        return (
-            <Form.Group key={attr} controlId={attr}>
-                <Form.Label>{attr}</Form.Label>
-                <Form.Control onChange={handleChange} placeholder={attr} value={value} />
+const TextInput = props => {
+    return (
+            <Form.Group key={props.attr} controlId={props.attr}>
+                <Form.Label>{props.attr}</Form.Label>
+                <Form.Control onChange={props.handleChange} placeholder={props.attr} value={props.value} />
             </Form.Group>
         );
-    }
 }
 
 export default TextInput;
