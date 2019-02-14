@@ -4,7 +4,8 @@
     grid-template-rows: 55px auto;
     background-color: #F0F0F7;
     min-height: 100vh;
-    min-width: 100vw;
+    width: 100vw;
+    overflow: auto;
 }
 
 main {
@@ -12,6 +13,7 @@ main {
     grid-column-end: span 1;
     grid-row-start: 2;
     grid-row-end: span 1;
+    max-width: 100vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -30,5 +32,14 @@ h1:first-child {
 @media screen and (min-width: 1500px) {
     #root {
         width: 1500px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #root {
+        grid-template-columns: 179px auto;
+    }
+    #sidebar .navLinkContainer a {
+        max-width: 174px;
     }
 }

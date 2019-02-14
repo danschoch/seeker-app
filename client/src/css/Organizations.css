@@ -4,7 +4,8 @@ main {align-content: flex-start;}
 #orgTableContainer {
     font-family: "Source Sans Pro", sans-serif;
     height: 70vh;
-    width: 120vh;
+    width: 81vw;
+    max-width: 900px;
     flex: auto;
     max-height: 588px;
     max-width: 900px;

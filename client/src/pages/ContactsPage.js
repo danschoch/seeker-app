@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ContactsTable from '../components/ContactsTable';
+import ContactsTable from '../components/tables/ContactsTable';
 import { connect } from 'react-redux';
 
 class ContactsPage extends Component {

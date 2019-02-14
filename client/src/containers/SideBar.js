@@ -16,7 +16,7 @@ class SideBar extends Component {
         return this.state.links.map( link => {
             return (
             <div key={ link } className='navLinkContainer'>
-                <NavLink to={`/${link}`} activeClassName='active' >{this.capitalizeFirstLetter(link)}</NavLink>
+                <NavLink to={`/${link}`} activeClassName='activeNav' >{this.capitalizeFirstLetter(link)}</NavLink>
                 <span className='rectangle'/>
             </div>  
             )

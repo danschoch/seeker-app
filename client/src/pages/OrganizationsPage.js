@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import OrganizationsTable from '../components/OrganizationsTable';
+import OrganizationsTable from '../components/tables/OrganizationsTable';
 import { connect } from 'react-redux';
 
 class OrganizationsPage extends Component {
