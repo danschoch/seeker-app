@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { ReactComponent as ContactSvg } from '../css/contactIcon.svg';
+import { ReactComponent as ContactSvg } from '../../css/contactIcon.svg';
 import OrgRow from './OrgRow';
 import { Table } from 'react-bootstrap';
-import CustomTable from './CustomTable';
+import CustomTable from '../CustomTable';
 import uuid from 'uuid';
-import '../css/Organizations.css';
+import '../../css/Organizations.css';
 
 
 class OrganizationsTable extends Component {

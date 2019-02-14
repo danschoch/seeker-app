@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { ReactComponent as ContactSvg } from '../css/contactIcon.svg';
-import ContactRow from './ContactRow';
+import ContactRow from './tables/ContactRow';
 import Table from 'react-bootstrap/Table';
 import uuid from 'uuid';
 import '../css/Contacts.css';
