@@ -66,11 +66,11 @@ class ContactForm extends Component {
     // Render Inputs
     renderInputs = () => {
         return Object.keys(this.state).map( input => {
-            const realInput = this.state[input]
-           if (typeof realInput === 'object') {
-                 return <SelectInput  key={input} attr={input} handleChange={this.handleSelectChange} value={realInput.value} options={realInput.options} />
+            const inputVal = this.state[input]
+           if (typeof inputVal === 'object') {
+                 return <SelectInput  key={input} attr={input} handleChange={this.handleSelectChange} value={inputVal.value} options={inputVal.options} />
            } else {
-               return <TextInput key={input} attr={input} handleChange={this.handleTextChange} value={realInput} />
+               return <TextInput key={input} attr={input} handleChange={this.handleTextChange} value={inputVal} />
            }
           
        });
