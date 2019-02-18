@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import OrganizationsTable from '../components/tables/OrganizationsTable';
 import { connect } from 'react-redux';
+import OrgsTableContainer from '../containers/OrgsTableContainer';
 
 class OrganizationsPage extends Component {
 
@@ -8,7 +8,7 @@ class OrganizationsPage extends Component {
         return(
             <React.Fragment>
                 <h1>Organizations</h1>
-                <OrganizationsTable title='All Organizations' orgs={this.props.orgsList} />
+                <OrgsTableContainer orgsList={ this.props.orgsList } />
             </React.Fragment>
         )
     }
