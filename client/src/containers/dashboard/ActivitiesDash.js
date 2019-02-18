@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { fakeActivities } from '../../mockData';
-import Activity from '../../components/Activity';
+import Activity from '../../components/dash/Activity';
 
 class ActivitiesDash extends Component {
 

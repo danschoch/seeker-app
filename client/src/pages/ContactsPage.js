@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import ContactsTable from '../components/tables/ContactsTable';
 import ContactsTableContainer from '../containers/ContactsTableContainer'
 import { connect } from 'react-redux';
+import '../css/Contacts.css';
 
 class ContactsPage extends Component {
 

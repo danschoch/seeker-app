@@ -1,38 +1,29 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Table from 'react-bootstrap/Table';
-import '../css/Contacts.css';
 
-class CustomTable extends Component {
+const capFirstChar = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
-    capFirstChar = (string) => {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-    }
+const renderColumnNames = (columnList) => {
+    return columnList.map( columnName => {
+        return <th>{ capFirstChar(columnName) }</th>
+    })
+}
 
-    renderColumnNames = () => {
-        return this.props.columnList.map( columnName => {
-            return <th>{ this.capFirstChar(columnName) }</th>
-        })
-    }
-
-    render() {
-        return (
-            <Table responsive bordered={ false } >
-                <thead>
-                    <tr>
-                        {this.renderColumnNames()}
-                        {/* <th>Name</th>
-                        <th>Title</th>
-                        <th>Organization</th>
-                        <th>Last Contacted</th> */}
-                    </tr>
-                </thead>
-                <tbody>
-                    {this.props.children}
-                </tbody>
-            </Table> 
-        )
-    }
-
+const CustomTable = ({ columnList, children }) => {
+    return (
+        <Table responsive bordered={ false } >
+            <thead>
+                <tr>
+                    {renderColumnNames(columnList)}
+                </tr>
+            </thead>
+            <tbody>
+                { children }
+            </tbody>
+        </Table> 
+    )
 }
 
 export default CustomTable
