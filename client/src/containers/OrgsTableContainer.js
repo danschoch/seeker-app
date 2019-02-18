@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { ReactComponent as ContactSvg } from '../css/contactIcon.svg';
-import TableHeader from '../components/TableHeader';
-import CustomTable from '../components/CustomTable';
+import TableHeader from '../components/tables/TableHeader';
+import CustomTable from '../components/tables/CustomTable';
 import OrgRow from '../components/tables/OrgRow';
 import uuid from 'uuid';
-import '../css/Contacts.css';
+import '../css/Organizations.css';
 
 class OrgsTableContainer extends Component {
 

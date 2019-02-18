@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { ReactComponent as ContactSvg } from '../css/contactIcon.svg';
-import TableHeader from '../components/TableHeader';
-import CustomTable from '../components/CustomTable';
+import TableHeader from '../components/tables/TableHeader';
+import CustomTable from '../components/tables/CustomTable';
 import ContactRow from '../components/tables/ContactRow';
 import uuid from 'uuid';
 import '../css/Contacts.css';
