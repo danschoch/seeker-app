@@ -1,5 +1,5 @@
 import React from 'react';
-import Moment from 'react-moment';
+// import Moment from 'react-moment';
 
 const renderOrg = (org) => {
     if (org === null) {
@@ -10,7 +10,7 @@ const renderOrg = (org) => {
 }
 
 const ContactRow = ({ contact }) => {
-    const formattedDate = <Moment format="MMM. DD gggg" >{contact.lastContact}</Moment>
+    // const formattedDate = <Moment format="MMM. DD gggg" >{contact.lastContact}</Moment>
 
     return (
         <tr>
