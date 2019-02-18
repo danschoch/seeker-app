@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Goal from '../../components/Goal'
+import Goal from '../../components/dash/Goal'
 
 class Goals extends Component {
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { fakeContacts } from '../../mockData';
-import Contact from '../../components/Contact';
+import Contact from '../../components/dash/Contact';
 
 class ContactsDash extends Component {
 
