@@ -23,7 +23,7 @@ class ContactsTableContainer extends Component {
     render() {
         return (
             <div className='container-fluid customTableContainer'>
-                <TableHeader title='Industry' >
+                <TableHeader title={this.props.title} >
                     <ContactSvg/>
                 </TableHeader>
 
