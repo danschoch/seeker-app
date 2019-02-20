@@ -7,7 +7,7 @@ const capFirstChar = (string) => {
 
 const renderColumnNames = (columnList) => {
     return columnList.map( columnName => {
-        return <th>{ capFirstChar(columnName) }</th>
+        return <th key={columnName}>{ capFirstChar(columnName) }</th>
     })
 }
 
