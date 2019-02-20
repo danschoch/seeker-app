@@ -1,4 +1,5 @@
 import React from 'react';
+import Voter from '../Voter';
 
 
 const renderPOC = (contact) => {
@@ -16,6 +17,7 @@ const OrgRow = ({ org }) => {
             <td>{renderPOC(org.contacts[0])}</td>
             <td className='indentToCenter'>{org.contacts.length}</td>
             <td>{org.website}</td>
+            <Voter />
         </tr>
     )
 }

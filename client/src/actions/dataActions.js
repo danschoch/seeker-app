@@ -11,6 +11,7 @@ export function fetchOrganizations() {
 }
 
 export function addOrganization(data) {
+  console.log('C')
   return (dispatch) => {
     return fetch('/organizations', {
         method: "POST",
@@ -22,9 +23,11 @@ export function addOrganization(data) {
     }).then(response => {
       return response.json()
     }).then(responseJSON => {
+      console.log('D')
       return dispatch({type: 'ADD_ORGANIZATION', payload: responseJSON})
     });
   }
+  console.log('E')
 }
 
 export function fetchContacts() {

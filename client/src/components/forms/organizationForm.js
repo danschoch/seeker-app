@@ -37,11 +37,11 @@ class OrganizationForm extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-
+        console.log('A')
         this.props.addOrganization({
             ...this.state,
         });
-
+        console.log('B')
         this.setState({
             name: '',
             about: '',
