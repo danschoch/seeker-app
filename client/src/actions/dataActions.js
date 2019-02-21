@@ -20,12 +20,13 @@ export function addOrganization(data) {
           "X-Key-Inflection": "camel"
         },
         body: JSON.stringify(data)
-    }).then(response => {
+    })
+    .then(response => {
       return response.json()
     }).then(responseJSON => {
       console.log('D')
       return dispatch({type: 'ADD_ORGANIZATION', payload: responseJSON})
-    });
+    }); 
   }
   console.log('E')
 }

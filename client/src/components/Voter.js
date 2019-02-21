@@ -6,7 +6,7 @@ class Voter extends Component {
         voteCount: 0
     }
 
-    submitVote = () => {
+    submitVote() {
         this.setState({
             voteCount: this.state.voteCount + 1
         })
